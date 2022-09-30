@@ -3,13 +3,13 @@
 @import 'part';
 
 
+
 .wrap{
-  width: 100vw;
-  font-size: 1.6rem;
+  max-width: 100vw;
+  width:100%;
   font: $BN;
   color: $black;
-  //position: relative;
-  //z-index: 1;
+  overflow: hidden;
 }
 .container{
   width: 100%;
@@ -17,10 +17,39 @@
   margin: 0 auto;
   padding: 10rem 2rem;
   font: $BN;
+
 }
 .header{
+  position: relative;
   font-size: 2.4rem;
   padding: 0 2rem;
+  z-index: 1;
+  &-dropdown{
+    display: none;
+    position: absolute;
+    top: 5rem;
+    left: -2rem;
+    background-color: $white;
+    overflow: auto;
+    box-shadow: 1rem 1rem 3rem rgba(1, 163, 164, 0.15);
+    z-index: 1;
+    min-width: 18rem;
+    &__active{
+      color: #01a3a4;
+      border-bottom: 0.2rem solid #01a3a4;
+    }
+    &__item{
+      padding: 3rem 2rem;
+      letter-spacing: 0.25rem;
+      width: 100%;
+      &:hover{
+        background-color: #F0F8F6;
+      }
+    }
+    &__show {
+      display: block;
+    }
+  }
   &-menu{
     display: flex;
     justify-content: center;
@@ -30,8 +59,81 @@
   &-item{
     margin: 0 5rem;
     text-transform: uppercase;
+    position: relative;
+    letter-spacing: 0.1rem;
+    &__mob{
+      display: none;
+    }
+  }
+  &-mobile{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    &__img{
+      display: none;
+      position:absolute ;
+      top: 0rem;
+      left: 0rem;
+      img{
+        max-height: 5rem;
+      }
+    }
+    span
+    {
+      display: none;
+      width: 1.7rem;
+      height: 0.1rem;
+      margin-bottom: 0.4rem;
+      top: 3rem;
+      right: 1rem;
+      position: relative;
+      background: #34495E;
+      border-radius: 0.6rem;
+      z-index: 1;
+      transform-origin: 0.5rem 0px;
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+      background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+      opacity 0.55s ease;
+      &:first-child {
+        transform-origin: 0% 0%;
+      }
+      &:nth-last-child(2)
+      {
+        transform-origin: 0% 100%;
+      }
+    }
+  }
+  &-checkbox {
+    width: 2rem;
+    height: 2rem;
+    top: 3rem;
+    right: 1rem;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    &:checked ~ span {
+      //opacity: 1;
+      transform: rotate(45deg) ;
+    }
+    &:checked ~ span:nth-last-child(3) {
+      transform: rotate(-45deg) ;
+    }
+    &:checked ~ span:nth-last-child(2) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    &:checked ~ ul {
+      display: flex;
+      transform: none;
+    }
   }
 }
+
 
 
 .main{
@@ -393,15 +495,22 @@
 }
 
 .blog{
-  position: relative;
-  &:before{
-    content: url("../img/icon/line_bg.svg");
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    z-index: -1;
+  &-wrap{
+    position: relative;
+    &:before{
+      content: url("../img/icon/line_bg.svg");
+      position: absolute;
+      transform: translate(-50%,-50%);
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+    }
   }
+  .section-desc p{
+    max-height: 7.2rem;
+    overflow: hidden;
+  }
+
 
    &-button{
       font-family: $roboto;
@@ -450,6 +559,35 @@
       left: 0rem;
     }
   }
+  .slick-dotted.slick-slider{
+    //margin-bottom: -5rem;
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+    list-style-type: none;
+    position: relative;
+    //top: -2rem;
+    li {
+      margin: 0 0.25rem;
+      width: 6.6rem;
+      height: 0.1rem;
+      button {
+        display: block;
+        width: 6.6rem;
+        height: 0.2rem;
+        padding: 0;
+        border: 0.1rem;
+        background: #F0F8F6;
+        text-indent: -9999px;
+      }
+    }
+    li.slick-active button {
+      background: linear-gradient(141.39deg, #74E6CF 13.88%, #C0E594 106.32%);
+    }
+  }
 }
 
 
@@ -482,6 +620,12 @@
         top: -9rem;
         left: -12.5rem;
         z-index: -1;
+      }
+      &:after{
+        content: url("../img/form.png");
+        position: absolute;
+        top: -9rem;
+        left: -12.5rem;
       }
     }
   }
@@ -520,24 +664,38 @@
    display: flex;
     justify-content: space-between;
   }
-  &-img{
-    position: absolute;
-    top:10rem;
-    left: 60rem;
-
-  }
-  //&-wrap{
-  //  position: relative;
-  //  &:before{
-  //    content: url("../img/form.png");
-  //    position: absolute;
-  //    top: 12rem;
-  //    right: -30rem;
-  //  }
-  //}
   .section-title{
     text-align: left;
   }
+  //&-modal{
+  //  position: fixed;
+  //  left: 0;
+  //  top: 0;
+  //  width: 100%;
+  //  height: 100%;
+  //  background-color: rgba(0, 0, 0, 0.5);
+  //  opacity: 0;
+  //  visibility: hidden;
+  //  transform: scale(1.1);
+  //  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  //  &__content {
+  //    position: absolute;
+  //    top: 50%;
+  //    left: 50%;
+  //    transform: translate(-50%, -50%);
+  //    background-color: white;
+  //    padding: 1rem 1.5rem;
+  //    width: 24rem;
+  //    border-radius: 0.5rem;
+  //  }
+  //
+  //  &__show{
+  //    opacity: 1;
+  //    visibility: visible;
+  //    transform: scale(1.0);
+  //    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  //  }
+  //}
 }
 
 
@@ -580,6 +738,17 @@
     position: relative;
     left: -18rem;
     width: 48%;
+    &__mob{
+      display: none;
+      position: relative;
+      &:after{
+        content: url("../img/icon/mobRew.svg");
+        position: absolute;
+        top: -2rem;
+        right: 4rem;
+        z-index: -1;
+      }
+    }
   }
   &-author{
     position: relative;
@@ -602,6 +771,12 @@
   }
   &-review{
     padding-right:2.5rem ;
+    &__item{
+      display: none;
+    }
+    &__slider{
+      position: relative;
+    }
     &__scroll{
       max-height: 28rem;
       overflow-y: scroll;
@@ -625,6 +800,8 @@
       }
     }
     &__text{
+      max-width: 100%;
+      //display: none;
       p{
         margin-bottom: 2rem;
         line-height: 2.88rem;
@@ -643,14 +820,51 @@
       }
     }
   }
+  .prev, .next {
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: -6rem;
+    left:50%;
+    transform: translate(-50%);
+  }
+
+  .next {
+    &:after{
+      content: url("../img/icon/Arrow_right.svg");
+      position: absolute;
+      right: -2rem;
+    }
+  }
+  .prev{
+    &:after{
+      content: url("../img/icon/Arrow_left.svg");
+      position: absolute;
+      left: -2rem;
+    }
+  }
+
 }
-
-
-
 .footer{
   position: relative;
   background-color: $white;
   z-index: 1;
+  &:before,&:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #F0F8F6;
+    left: 0;
+  }
+  &:before{
+    top: 0;
+  }
+  &:after{
+    bottom:6rem;
+  }
+
   &-wrap{
     padding: 0rem 2rem;
   }
@@ -660,6 +874,11 @@
       color: $grey;
       font-size: 1.2rem;
       font-family: $roboto;
+    }
+  }
+  &-logo{
+    img{
+      width: 80%;
     }
   }
   &-block{
@@ -678,6 +897,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     &__item{
       font-size: 1.8rem;
       text-transform: uppercase;
@@ -691,6 +911,10 @@
         letter-spacing: 0.1rem;
       }
 
+
+    }
+    &__mob{
+      display: none;
     }
     &__icon{
       position: relative;
@@ -701,7 +925,7 @@
       &:after{
         content: url("../img/icon/SheepFish.svg");
         position: absolute;
-        top: 0rem;
+        top: -1rem;
         left: 9rem;
       }
 
@@ -714,6 +938,9 @@
       width: 3rem;
       height: 3rem;
       display: block;
+      &:last-child{
+        margin-right: 0;
+      }
       &:nth-child(1):after{
         content: url("../img/icon/facebook.svg");
         position: absolute;
@@ -735,11 +962,18 @@
       &:nth-child(4):after{
         content: url("../img/icon/youtube.svg");
         position: absolute;
-        top: 0rem;
-        left: 0rem;
+        top: 0;
+        left: 0;
       }
     }
   }
 }
+
+
+
+
+
+
+
 
 @import 'media';

@@ -7,24 +7,47 @@
 <title>test</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Galada&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;700&family=Bebas+Neue&family=Galada&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/vendor.min.css">
 <link rel="stylesheet" href="css/app.min.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
 <header>
 <div class="header container">
-<ul class="header-menu">
-<li class="header-item">Home</li>
-<li class="header-item">Boxes</li>
+<div class="header-mobile">
+<div class="header-mobile__img">
+<a href="#">
+<img class="header-logo" src="img/logo.png" alt="logo">
+</a>
+</div>
+<input class="header-checkbox" type="checkbox"/>
+<span></span>
+<span></span>
+<span></span>
+<ul class="header-menu" >
+<li class="header-item"><a href="#">Home</a></li>
 <li class="header-item">
+<a class="header-dropdown__open" href="#">Boxes</a>
+<ul class="header-dropdown">
+<li class="header-dropdown__item"><a href="#">What's inside</a></li>
+<li class="header-dropdown__item"><a href="#">Kiwi Eco Box</a></li>
+</ul>
+</li>
+<li class="header-item ">
 <a href="#">
 <img class="header-logo" src="img/logo.png" alt="logo">
 </a>
 </li>
-<li class="header-item">About</li>
-<li class="header-item">Account</li>
+<li class="header-item header-item__mob"><a href="#">What's inside</a></li>
+<li class="header-item header-item__mob"><a href="#">Kiwi Eco Box</a></li>
+<li class="header-item"><a href="#">About</a></li>
+<li class="header-item"><a href="#">Account</a></li>
 </ul>
+</div>
 </div>
 </header>
 <main>
@@ -193,7 +216,7 @@
 <div class="section-title">
 <h3>What's new in blog?</h3>
 </div>
-<ul class="section-list blog-list ">
+<ul class="section-list blog-list">
 <li class="section-list__item blog-item">
 <div class="section-list__img blog-item__img">
 <img src="img/1.png" alt="">
@@ -263,18 +286,15 @@
 </div>
 <div class="signin-main">
 <div class="signin-form__block">
-<form class="signin-form">
+<form class="signin-form" action="#">
 <input class="signin-input" type="email" placeholder="Your email adress">
 <div class="signin-button section-button">
-<button class="section-button__item" type="submit" >Sign up</button>
+<button class="section-button__item signin-button" >Sign up</button>
 </div>
 </form>
 <div class="signin-form__desc">
 <p>By clicking "sign up" you agree to receive emails from CAUSEBOX and accept our web terms of use and privacy and cookie policy</p>
 </div>
-</div>
-<div class="signin-img">
-<img src="img/form.png" alt="">
 </div>
 </div>
 </div>
@@ -294,8 +314,15 @@
 <img src="img/clients.png" alt="">
 </div>
 <div class="clients-review">
+<div class="clients-review__slider">
+<div class="clients-review__item">
+<div class="clients-info">
+<div class="clients-img__mob">
+<img src="img/mobClient.png" alt="">
+</div>
 <div class="clients-author">
 <span>Jessica T.</span>
+</div>
 </div>
 <div class="clients-review__text">
 <div class="clients-review__scroll section-desc">
@@ -308,6 +335,50 @@
 </div>
 </div>
 </div>
+<div class="clients-review__item">
+<div class="clients-info">
+<div class="clients-img__mob">
+<img src="img/mobClient.png" alt="">
+</div>
+<div class="clients-author">
+<span>Robert B.</span>
+</div>
+</div>
+<div class="clients-review__text">
+<div class="clients-review__scroll section-desc">
+<p>Sit amet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+<p>Sit amet, consectetur adipiscing elit,  Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+<p>Sit amet, consectetur adipiscing elit, Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+<p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+<p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+<p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+</div>
+</div>
+</div>
+<div class="clients-review__item">
+<div class="clients-info">
+<div class="clients-img__mob">
+<img src="img/mobClient.png" alt="">
+</div>
+<div class="clients-author">
+<span>Alina.B.</span>
+</div>
+</div>
+<div class="clients-review__text">
+<div class="clients-review__scroll section-desc">
+<p>Consectetur adipiscing elit, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+<p>Sit amet, consectetur adipiscing elit,  Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+<p>Sit amet, consectetur adipiscing elit, Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+<p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+<p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+<p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+</div>
+</div>
+</div>
+<div class="prev" onclick="plusSlides(-1)"></div>
+<div class="next" onclick="plusSlides(1)"></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -318,13 +389,15 @@
 <div class="footer-block">
 <ul class="footer-list">
 <li class="footer-list__item"><a href="">Home</a></li>
-<li class="footer-list__item"><a href="">Boxes</a></li>
+<li class="footer-list__item footer-list__desc"><a href="">Boxes</a></li>
+<li class="footer-list__item footer-list__mob"><a href="">What's inside</a></li>
+<li class="footer-list__item footer-list__mob"><a href="">Kiwi Eco Box</a></li>
 <li class="footer-list__item"><a href="">About</a></li>
 <li class="footer-list__item"><a href="">Account</a></li>
 <li class="footer-list__item"><a href="">blog</a></li>
 </ul>
 <div class="footer-logo">
-<img src="img/logo-footer.png" alt="logo">
+<img src="img/footer.png" alt="logo">
 </div>
 <ul class="footer-list">
 <li class="footer-list__item"><a href="">Faq</a></li>
@@ -348,6 +421,25 @@
 </footer>
 </main>
 </body>
-<script type="text/javascript" src="js/vendor.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script type="text/javascript" src="js/app.min.js"></script>
 </html>
+<!--<div  class="modal-window">-->
+<!--                                <div class="modal-window__title">-->
+<!--                                    <div class="signin-modal__content modal-content">-->
+<!--                                        <div class="signin-modal__img">-->
+<!--                                            <img src="img/modal-img.png" alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="signin-modal__img">-->
+<!--                                            <div class="signin-modal__title">-->
+<!--                                                <p>Thank you for <span>subscribing!</span></p>-->
+<!--                                            </div>-->
+<!--                                            <div class="signin-modal__desc">-->
+<!--                                                <p>Now you will receive alerts when new news and boxes are released!</p>-->
+<!--                                            </div>-->
+<!--                                            <button class="section-button__item">good</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
