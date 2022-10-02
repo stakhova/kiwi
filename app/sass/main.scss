@@ -2,8 +2,6 @@
 @import 'vars';
 @import 'part';
 
-
-
 .wrap{
   max-width: 100vw;
   width:100%;
@@ -174,6 +172,7 @@
       text-transform: uppercase;
       color: $lightblack;
       letter-spacing: 0.5rem;
+      line-height: 9.6rem;
     }
     &__right{
       color: white;
@@ -409,7 +408,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-fill-color: transparent;
-      top: 9rem;
+      bottom: -20rem;
       left: -8rem;
     }
   }
@@ -593,41 +592,34 @@
 
 
 .signin{
-  padding-bottom: 10rem;
+
   &-form{
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 1.5rem 1.5rem 3rem;
-    width: 100%;
     border-bottom-right-radius: 5rem;
     border-top-right-radius: 5rem;
     background-color: white;
-
+    width: 59.5rem;
     &__desc{
       font-size: 1.2rem;
       color: #C4C4C4;
       font-family: $roboto;
       padding-top: 1rem;
     }
-    &__block{
-      max-width: 59.5rem;
-      position: relative;
-      z-index: 0;
-      margin: 4rem 0;
-      &:before{
-        content: url("../img/form-left.png");
-        position: absolute;
-        top: -9rem;
-        left: -12.5rem;
-        z-index: -1;
-      }
-      &:after{
-        content: url("../img/form.png");
-        position: absolute;
-        top: -9rem;
-        left: -12.5rem;
-      }
+  }
+  &-block{
+    position: relative;
+    z-index: 0;
+    margin: 4rem 0;
+    &:before{
+      content: url("../img/form-left.png");
+      position: absolute;
+      top: -9rem;
+      left: -12.5rem;
+      z-index: -1;
     }
+
   }
   &-title{
     padding: 0 0 2rem 7rem;
@@ -640,11 +632,12 @@
     }
   }
   &-text{
+    position: relative;
+
     p{
       font-size: 9.6rem;
       line-height: 9.6rem;
       color: $blue;
-      margin-top: -1rem;
     }
   }
   &-input {
@@ -659,43 +652,27 @@
   }
   &-wrap{
     position: relative;
+    padding-bottom: 22rem;
+  }
+  &-img{
+    position: relative;
+    &:after{
+      content: url("../img/form.png");
+      left: -64rem;
+      top: -30rem;
+      position: absolute;
+      width: 75rem;
+      z-index: -1;
+    }
   }
   &-main{
    display: flex;
     justify-content: space-between;
+    position: relative;
   }
   .section-title{
     text-align: left;
   }
-  //&-modal{
-  //  position: fixed;
-  //  left: 0;
-  //  top: 0;
-  //  width: 100%;
-  //  height: 100%;
-  //  background-color: rgba(0, 0, 0, 0.5);
-  //  opacity: 0;
-  //  visibility: hidden;
-  //  transform: scale(1.1);
-  //  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-  //  &__content {
-  //    position: absolute;
-  //    top: 50%;
-  //    left: 50%;
-  //    transform: translate(-50%, -50%);
-  //    background-color: white;
-  //    padding: 1rem 1.5rem;
-  //    width: 24rem;
-  //    border-radius: 0.5rem;
-  //  }
-  //
-  //  &__show{
-  //    opacity: 1;
-  //    visibility: visible;
-  //    transform: scale(1.0);
-  //    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-  //  }
-  //}
 }
 
 
@@ -715,8 +692,7 @@
       position: absolute;
       top: 10rem;
       left: -38rem;
-      //width: 25rem;
-      //overflow-x: hidden;
+      z-index: -1;
     }
     &:after{
       content: url("../img/icon/cliens-wave.svg");
@@ -725,6 +701,7 @@
       right:-25%;
       width: 25rem;
       overflow-x: hidden;
+      z-index: -1;
     }
   }
   &-block{
@@ -736,6 +713,7 @@
   }
   &-img{
     position: relative;
+    z-index: -1;
     left: -18rem;
     width: 48%;
     &__mob{
@@ -760,6 +738,7 @@
       position: absolute;
       top: 5rem;
       right: 6rem;
+      z-index: -1;
     }
     &:after{
       content: url("../img/icon/wave.svg");
@@ -970,6 +949,82 @@
 }
 
 
+.modal{
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%) scale(.9);
+  max-width: 80rem;
+  width: 95%;
+  height: 46rem;
+  background-color: #fff;
+  border: 0.1rem solid #FFFFFF;
+  border-radius: 2rem;
+  transition: all .18s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  &-desc{
+    position: relative;
+    &:after{
+      content: url("../img/icon/wave.svg");
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+  &-content{
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  &-img{
+    height: 100%;
+    &-wrap{
+    height: 100%;
+    background-color: #F0F8F6;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+    }
+
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &.show{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+    z-index: 1000;
+  }
+  &-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 65%;
+    padding: 1rem;
+    text-align: center;
+    .section-title span{
+      color: $blue;
+    }
+  }
+  &-back{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000, .6);
+      z-index: 10;
+    }
+  &-hidden{
+    display: none;
+  }
+}
 
 
 

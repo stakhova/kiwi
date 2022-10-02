@@ -34,29 +34,6 @@
 
 
 
-// function openModal(){
-//     const modal = document.querySelector(".modal");
-//     const trigger = document.querySelector(".trigger");
-//     const closeButton = document.querySelector(".close-button");
-//
-//     function toggleModal() {
-//         modal.classList.toggle("show-modal");
-//     }
-//     function windowOnClick(event) {
-//         if (event.target === modal) {
-//             toggleModal();
-//         }
-//         console.log('ssss')
-//     }
-//     let form = document.querySelector(".signin-form");
-//     function handleForm(event) { event.preventDefault(); }
-//     form.addEventListener('submit', handleForm);
-//     trigger.addEventListener("click", toggleModal);
-//     closeButton.addEventListener("click", toggleModal);
-//     window.addEventListener("click", windowOnClick);
-// };
-// openModal()
-
 document.querySelector('.header-checkbox').addEventListener('change', function(e) {
     document.body.style.overflow = e.target.checked === true ? 'hidden' : '';
 });
@@ -101,5 +78,75 @@ function showSlides(n) {
     }
     slides[slideIndex-1].style.display = "block";
 }
+
+
+
+
+
+function OpenWin() {
+    "use strict";
+
+    const backdrop = document.querySelector('.modal-back ');
+    document.addEventListener('click', modalHandler);
+
+    function modalHandler(evt) {
+        const modalBtnOpen = evt.target.closest('.signin-button');
+        if (modalBtnOpen) { // open btn click
+            const modalSelector = modalBtnOpen.dataset.modal;
+            showModal(document.querySelector(modalSelector));
+        }
+
+        const modalBtnClose = evt.target.closest('.modal-close');
+        if (modalBtnClose) { // close btn click
+            evt.preventDefault();
+            hideModal(modalBtnClose.closest('.modal'));
+            console.log('ssss')
+        }
+
+        if (evt.target.matches('#modal-back')) { // backdrop click
+            hideModal(document.querySelector('.modal.show'));
+        }
+    }
+
+    function showModal(modalElem) {
+        modalElem.classList.add('show');
+        backdrop.classList.remove('modal-hidden');
+        document.body.style.overflow = 'hidden' ;
+    }
+
+    function hideModal(modalElem) {
+        modalElem.classList.remove('show');
+        backdrop.classList.add('modal-hidden');
+        document.body.style.overflow = 'auto' ;
+    }
+    let form = document.querySelector(".signin-form");
+    function handleForm(event) { event.preventDefault(); }
+    form.addEventListener('submit', handleForm);
+};
+
+
+    $("signin-form").validate({
+        rules:{
+            email:{
+                required:true,
+                email: true,
+            }
+        }
+    });
+
+$(document).ready(function(){
+
+    $("#signin-form").submit(function(e) {
+        e.preventDefault();
+        if ($(this).valid()) {
+            e.preventDefault();
+            OpenWin();
+        } else {
+            console.log("nooo")
+            // do error stuff here
+        }
+    });
+})
+
 
 

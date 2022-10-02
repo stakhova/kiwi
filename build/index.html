@@ -285,16 +285,39 @@
 <p>to your inbox!</p>
 </div>
 <div class="signin-main">
-<div class="signin-form__block">
-<form class="signin-form" action="#">
-<input class="signin-input" type="email" placeholder="Your email adress">
+<div class="signin-block">
+<form class="signin-form" action="#" id="signin-form">
+<input class="signin-input" type="email" placeholder="Your email address" required>
 <div class="signin-button section-button">
-<button class="section-button__item signin-button" >Sign up</button>
+<button type="submit" class="section-button__item signin-button" data-modal="#modal">Sign up</button>
 </div>
+<div id="modal" class="modal">
+<div class="modal-content">
+<div class="modal-img-wrap">
+<div class="modal-img">
+<img src="img/modal-img.png" alt="">
+</div>
+</div>
+<div class="modal-block">
+<div class="modal-title section-title">
+<h3>Thank you for <span>subscribing!</span></h3>
+</div>
+<div class="modal-desc section-list__title">
+<h3>Now you will receive alerts when new news and boxes are released!</h3>
+</div>
+<div class="signin-button section-button">
+<button class="section-button__item modal-close">good</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-back modal-hidden" id="modal-back"></div>
 </form>
 <div class="signin-form__desc">
 <p>By clicking "sign up" you agree to receive emails from CAUSEBOX and accept our web terms of use and privacy and cookie policy</p>
 </div>
+</div>
+<div class="signin-img">
 </div>
 </div>
 </div>
@@ -423,23 +446,30 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/app.min.js"></script>
 </html>
-<!--<div  class="modal-window">-->
-<!--                                <div class="modal-window__title">-->
-<!--                                    <div class="signin-modal__content modal-content">-->
-<!--                                        <div class="signin-modal__img">-->
-<!--                                            <img src="img/modal-img.png" alt="">-->
-<!--                                        </div>-->
-<!--                                        <div class="signin-modal__img">-->
-<!--                                            <div class="signin-modal__title">-->
-<!--                                                <p>Thank you for <span>subscribing!</span></p>-->
-<!--                                            </div>-->
-<!--                                            <div class="signin-modal__desc">-->
-<!--                                                <p>Now you will receive alerts when new news and boxes are released!</p>-->
-<!--                                            </div>-->
-<!--                                            <button class="section-button__item">good</button>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
+<!--<form class="signin-formdd" method="post" action="" data-toggle="modal" id="myForm">-->
+<!--    <input class="signin-input" type="email" placeholder="Your email address" required>-->
+<!--    <div class="signin-button section-button">-->
+<!--        <button type="submit" class="section-button__item signin-button" data-modal="#modal">Sign up</button>-->
+<!--    </div>-->
+<!--</form>-->
+<!--<div class="modal fade" id="myModal" role="dialog">-->
+<!--    <div class="modal-dialog">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="modal-img">-->
+<!--                <img src="img/modal-img.png" alt="">-->
+<!--            </div>-->
+<!--            <div class="modal-block">-->
+<!--                <div class="modal-title">-->
+<!--                    <p>Thank you for <span>subscribing!</span></p>-->
+<!--                </div>-->
+<!--                <div class="modal-desc">-->
+<!--                    <p>Now you will receive alerts when new news and boxes are released!</p>-->
+<!--                </div>-->
+<!--                <button class="section-button__item modal-close">good</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
