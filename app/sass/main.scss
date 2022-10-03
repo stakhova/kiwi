@@ -150,14 +150,14 @@
         position: absolute;
         top: 13rem;
         left: -48rem;
-        z-index: 2;
+        z-index: 0;
       }
       &:after{
         content: url("../img/baner-right.png");
         position: absolute;
         top: 17rem;
         right: -53rem;
-        z-index: 2;
+        z-index: 0;
       }
     }
   }
@@ -298,13 +298,13 @@
     justify-content: flex-start;
     margin-right: 5rem;
     position: relative;
-    z-index: 1;
+    z-index: 0;
     &:before{
       content: url("../img/BOX-left.png");
       position: absolute;
       top: 2.6rem;
       left: -32rem;
-      z-index: 2;
+      z-index: 1;
     }
   }
   &-block:last-child{
@@ -317,7 +317,7 @@
     height: 100%;
     margin-right: 3rem;
     position: relative;
-    z-index: 0;
+    //z-index: 0;
     &:first-child{
       &:before{
         content: url("../img/icon/Ellipse-bl.svg");
@@ -355,7 +355,7 @@
   &-button{
     position: relative;
     margin: 0;
-    z-index: 1;
+    z-index: 0;
     &:before{
       content: url("../img/Box-right.png");
       position: absolute;
@@ -427,7 +427,6 @@
   grid-template-rows: repeat(2, 23.8rem);
   grid-gap: 0.7rem;
   position: relative;
-  z-index: 1;
   &:before{
     content: url("../img/icon/post-l.svg");
     position: absolute;
@@ -601,6 +600,15 @@
     border-top-right-radius: 5rem;
     background-color: white;
     width: 59.5rem;
+    position: relative;
+    z-index: 1;
+    &:before{
+      content: url("../img/form-left.png");
+      position: absolute;
+      top: -9rem;
+      left: -12.5rem;
+      z-index: 0;
+    }
     &__desc{
       font-size: 1.2rem;
       color: #C4C4C4;
@@ -610,15 +618,8 @@
   }
   &-block{
     position: relative;
-    z-index: 0;
+    //z-index: -1;
     margin: 4rem 0;
-    &:before{
-      content: url("../img/form-left.png");
-      position: absolute;
-      top: -9rem;
-      left: -12.5rem;
-      z-index: -1;
-    }
 
   }
   &-title{
@@ -642,10 +643,12 @@
   }
   &-input {
     border: none;
+
     &::placeholder {
       color: #C4C4C4;
       font-size: 1.4rem;
     }
+
   }
   &-button{
     margin: 0;
@@ -655,15 +658,9 @@
     padding-bottom: 22rem;
   }
   &-img{
-    position: relative;
-    &:after{
-      content: url("../img/form.png");
-      left: -64rem;
-      top: -30rem;
-      position: absolute;
-      width: 75rem;
-      z-index: -1;
-    }
+    position: absolute;
+    left: 31vw;
+    top: 11rem;
   }
   &-main{
    display: flex;
@@ -687,6 +684,7 @@
   }
   &-wrap{
     position: relative;
+    z-index: -1;
     &:before{
       content: url("../img/qq.png");
       position: absolute;
@@ -744,12 +742,14 @@
       content: url("../img/icon/wave.svg");
       position: absolute;
       top: 11rem;
-      left: 0rem;
+      left: 0;
+      z-index: -1;
     }
 
   }
   &-review{
     padding-right:2.5rem ;
+    z-index: -1;
     &__item{
       display: none;
     }
@@ -805,22 +805,25 @@
     cursor: pointer;
     position: absolute;
     bottom: -6rem;
-    left:50%;
     transform: translate(-50%);
+    z-index: -1;
   }
-
   .next {
+    left:calc( 50% + 2.5rem);
     &:after{
       content: url("../img/icon/Arrow_right.svg");
       position: absolute;
-      right: -2rem;
+      right: 0;
+
     }
   }
   .prev{
+    left:calc( 50% - 2.5rem);
     &:after{
       content: url("../img/icon/Arrow_left.svg");
       position: absolute;
-      left: -2rem;
+      left: 0;
+
     }
   }
 
@@ -828,7 +831,7 @@
 .footer{
   position: relative;
   background-color: $white;
-  z-index: 1;
+  z-index: 0;
   &:before,&:after{
     content: '';
     position: absolute;

@@ -111,13 +111,13 @@ function OpenWin() {
     function showModal(modalElem) {
         modalElem.classList.add('show');
         backdrop.classList.remove('modal-hidden');
-        document.body.style.overflow = 'hidden' ;
+        // document.body.style.overflow = 'hidden' ;
     }
 
     function hideModal(modalElem) {
         modalElem.classList.remove('show');
         backdrop.classList.add('modal-hidden');
-        document.body.style.overflow = 'auto' ;
+        // document.body.style.overflow = 'auto' ;
     }
     let form = document.querySelector(".signin-form");
     function handleForm(event) { event.preventDefault(); }
