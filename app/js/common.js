@@ -1,35 +1,46 @@
-(function dropDown(){
-    let openDrop = document.querySelector(".header-dropdown__open")
-    function DropDown() {
-        document.querySelector(".header-dropdown").classList.toggle("header-dropdown__show");
-        openDrop.classList.toggle("header-dropdown__active");
-    }
-    openDrop.addEventListener('click',DropDown);
-
-    window.onclick = function(event) {
-        if (!event.target.matches('.header-dropdown__open')) {
-            let dropdowns = document.getElementsByClassName("header-dropdown");
-            for (let i = 0; i < dropdowns.length; i++) {
-                let openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('header-dropdown__show')) {
-                    openDropdown.classList.remove('header-dropdown__show');
-                    openDrop.classList.remove("header-dropdown__active");
-
-                }
-            }
-        }
-    }
-})();
+// (function dropDown(){
+//     let openDrop = document.querySelector(".header-dropdown__open")
+//     function DropDown() {
+//         document.querySelector(".header-dropdown").classList.toggle("header-dropdown__show");
+//         openDrop.classList.toggle("header-dropdown__active");
+//     }
+//     openDrop.addEventListener('click',DropDown);
+//
+//     window.onclick = function(event) {
+//         if (!event.target.matches('.header-dropdown__open')) {
+//             let dropdowns = document.getElementsByClassName("header-dropdown");
+//             for (let i = 0; i < dropdowns.length; i++) {
+//                 let openDropdown = dropdowns[i];
+//                 if (openDropdown.classList.contains('header-dropdown__show')) {
+//                     openDropdown.classList.remove('header-dropdown__show');
+//                     openDrop.classList.remove("header-dropdown__active");
+//
+//                 }
+//             }
+//         }
+//     }
+// })();
 
 
 (function addSlider(){
-    const sliderBlog = document.querySelector(".blog-list")
-    if (window.innerWidth <= 768) {
-        sliderBlog.classList.add('single-item');
+    const sliderBlog = document.querySelector(".blog__list")
+
+    if (window.innerWidth <= 666) {
+        sliderBlog.classList.add('slider__blog');
     } else {
-        sliderBlog.classList.remove('single-item');
+        sliderBlog.classList.remove('slider__blog');
     }
 })();
+
+$(document).ready(function(){
+    $('.slider__blog').slick({
+        dots: true,
+    });
+})
+$(document).ready(function(){
+    $('.clients__review-slider').slick({
+    });
+})
 
 
 
@@ -39,11 +50,6 @@ document.querySelector('.header-checkbox').addEventListener('change', function(e
 });
 
 
-$(document).ready(function(){
-    $('.single-item').slick({
-        dots: true,
-    });
-})
 
 
 
@@ -52,32 +58,33 @@ $(document).ready(function(){
 
 
 
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-// const prev = document.querySelector(".prev");
-// const next = document.querySelector(".next");
-// prev.addEventListener("click", plusSlides.bind(1));
-// next.addEventListener("click", plusSlides.bind(-1));
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("clients-review__item");
-    // let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex-1].style.display = "block";
-}
+//
+// let slideIndex = 1;
+// showSlides(slideIndex);
+//
+// function plusSlides(n) {
+//     showSlides(slideIndex += n);
+// }
+// function currentSlide(n) {
+//     showSlides(slideIndex = n);
+// }
+//
+// // const prev = document.querySelector(".prev");
+// // const next = document.querySelector(".next");
+// // prev.addEventListener("click", plusSlides.bind(1));
+// // next.addEventListener("click", plusSlides.bind(-1));
+//
+// function showSlides(n) {
+//     let i;
+//     let slides = document.getElementsByClassName("clients__review-item");
+//     // let dots = document.getElementsByClassName("dot");
+//     if (n > slides.length) {slideIndex = 1}
+//     if (n < 1) {slideIndex = slides.length}
+//     for (i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none";
+//     }
+//     slides[slideIndex-1].style.display = "block";
+// }
 
 
 

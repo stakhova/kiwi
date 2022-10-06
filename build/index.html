@@ -7,8 +7,6 @@
 <title>test</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;700&family=Bebas+Neue&family=Galada&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/vendor.min.css">
 <link rel="stylesheet" href="css/app.min.css">
@@ -18,8 +16,9 @@
 <body>
 <header>
 <div class="header container">
-<div class="header-mobile">
-<div class="header-mobile__img">
+<div class="header__main">
+<div class="header__mob">
+<div class="header-mob__img">
 <a href="#">
 <img class="header-logo" src="img/logo.png" alt="logo">
 </a>
@@ -28,268 +27,313 @@
 <span></span>
 <span></span>
 <span></span>
-<ul class="header-menu" >
-<li class="header-item"><a href="#">Home</a></li>
-<li class="header-item">
-<a class="header-dropdown__open" href="#">Boxes</a>
-<ul class="header-dropdown">
-<li class="header-dropdown__item"><a href="#">What's inside</a></li>
-<li class="header-dropdown__item"><a href="#">Kiwi Eco Box</a></li>
+</div>
+<ul class="header__menu" >
+<li class="header__item"><a href="#">Home</a></li>
+<li class="header__item">
+<a href="#">Boxes</a>
+<ul class="header__dropdown">
+<li class="header__dropdown-item"><a href="#">What's inside</a></li>
+<li class="header__dropdown-item"><a href="#">Kiwi Eco Box</a></li>
 </ul>
 </li>
-<li class="header-item ">
-<a href="#">
-<img class="header-logo" src="img/logo.png" alt="logo">
+<li class="header__item header__logo">
+<a href="index.html">
+<img src="img/logo.png" alt="logo">
 </a>
 </li>
-<li class="header-item header-item__mob"><a href="#">What's inside</a></li>
-<li class="header-item header-item__mob"><a href="#">Kiwi Eco Box</a></li>
-<li class="header-item"><a href="#">About</a></li>
-<li class="header-item"><a href="#">Account</a></li>
+<li class="header__item"><a href="#">About</a></li>
+<li class="header__item"><a href="#">Account</a></li>
 </ul>
 </div>
 </div>
 </header>
 <main>
-<section class="section main">
+<section class="main section ">
 <div class="wrap">
-<div class="main-wrap">
-<div class="main-title">
+<div class="main__wrap">
+<div class="main__title-block">
+<div class="main__title">
 <h2>Everything You Need </h2>
-<div class="main-title__right">
+</div>
+<div class="main__title-right">
 <span>to Start Living</span>
 <p>Zero-Waste</p>
 </div>
 </div>
-<div class="main-block">
-<div class="main-block__little">
-<div class="main-img">
+<div class="main__block">
+<div class="main__block-little">
+<div class="main__img">
 <img src="img/baner-1.png" alt="">
 </div>
-<div class="main-img">
+<div class="main__img">
 <img src="img/baner-2.png" alt="">
 </div>
 </div>
-<div class="main-img main-block__big">
+<div class="main__img main__block-big">
 <img src="img/baner-main.png" alt="">
 </div>
-<div class="main-block__little">
-<div class="main-img">
+<div class="main__block-little">
+<div class="main__img">
 <img src="img/baner-3.png" alt="">
 </div>
-<div class="main-img">
+<div class="main__img">
 <img src="img/baner-4.png" alt="">
 </div>
 </div>
 </div>
-<div class="section-button">
-<button class="section-button__item">Start now</button>
+<div class="section__button">
+<a href="#">Start now</a>
 </div>
 </div>
 </div>
 </section>
-<section class="section work">
-<div class="wrap">
-<div class="work-wrap container">
-<div class="section-title">
+<section class="work section wrap ">
+<div class="work__wrap container">
+<div class="section__title">
 <h3>How it Works</h3>
 </div>
-<ul class="section-list">
-<li class="section-list__item work-item">
-<div class="section-list__img">
+<div class="work__block">
+<div class="work__back">
+<img src="img/icons/workLeft.svg" alt="">
+</div>
+<div class="work__back">
+<img src="img/icons/workRight.svg" alt="">
+</div>
+<ul class="section__list">
+<li class="section__list-item work__item">
+<div class="section__list-img">
 <img src="img/Three.png" alt="img">
 </div>
-<div class="section-list__title ">
+<div class="section__list-title ">
 <h3>Join The Movement </h3>
 </div>
-<div class="section-desc">
+<div class="section__desc">
 <p>Get started by signing up for monthly subscription. We bring you an easy way to start your zero-waste journey</p>
 </div>
 </li>
-<li class="section-list__item work-item">
-<div class="section-list__img">
+<li class="section__list-item work__item">
+<div class="section__list-img">
 <img src="img/Two.png" alt="img">
 </div>
-<div class="section-list__title">
+<div class="section__list-title">
 <h3>Get Your Box</h3>
 </div>
-<div class="section-desc">
+<div class="section__desc">
 <p>Every month receive your box with essential products, but plastic free and safe for the environment</p>
 </div>
 </li>
-<li class="section-list__item work-item">
-<div class="section-list__img">
+<li class="section__list-item work__item">
+<div class="section__list-img">
 <img src="img/One.png" alt="img">
 </div>
-<div class="section-list__title">
+<div class="section__list-title">
 <h3>Make a Difference</h3>
 </div>
-<div class="section-desc">
+<div class="section__desc">
 <p>Small steps can lead to bigger changes, and now you are the change. Let's build community of people who care</p>
 </div>
 </li>
 </ul>
-<div class="section-button">
-<button class="section-button__item">Get the Box</button>
 </div>
+<div class="section__button">
+<a href="#">Get the Box</a>
 </div>
 </div>
 </section>
-<section class="section box">
-<div class="wrap">
-<div class="box-wrap container">
-<div class="box-block box-block__image ">
-<div class="box-img">
-<img src="img/box2.png" alt="">
+<section class="box section wrap ">
+<div class="box__wrap container">
+<div class="box__block">
+<div class="box__images">
+<div class="box__back">
+<img src="img/BoxElement.png" alt="">
 </div>
-<div class="box-img">
+<div class="box__back">
+<img src="img/icons/boxTop.svg" alt="">
+</div>
+<div class="box__back">
+<img src="img/icons/boxBottom.svg" alt="">
+</div>
+<div class="box__back box__back-mob">
+<img src="img/icons/boxMob.svg" alt="">
+</div>
+<div class="box__img">
 <img src="img/box1.png" alt="">
 </div>
+<div class="box__img">
+<img src="img/box2.png" alt="">
 </div>
-<div class="box-block">
-<div class="box-title section-title">
+</div>
+<div class="box__info">
+<div class="box__title section__title">
 <h3>BOX OF A MONTH</h3>
 </div>
-<div class="box-desc section-desc">
+<div class="box__desc section__desc">
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 </div>
-<div class="box-button section-button">
-<button class="section-button__item">See What's Inside</button>
+<div class="box__button section__button">
+<a href="#">See What's Inside</a>
+</div>
+<div class="box__info-img">
+<img src="img/plantss.png" alt="">
 </div>
 </div>
 </div>
 </div>
 </section>
-<section class="section mission">
-<div class="wrap">
-<div class="mission-wrap container">
-<div class="mission-text section-text__blue">
+<section class="mission section wrap" >
+<div class="mission__wrap container">
+<div class="mission__back">
+<img src="img/icons/foots.svg" alt="">
+</div>
+<div class="mission__back">
+<img src="img/icons/missionLine.svg" alt="">
+</div>
+<div class="mission__text section__title-blue">
 <span>OUR MISSION</span>
 </div>
-<div class="main-title mission-title">
-<h2>We are here to help you live <br>greener and more sustainably</h2>
-<div class="main-title__right mission-title__right">
+<div class="mission__title-block  main__title-block">
+<div class="main__title mission__title">
+<h2>We are here to help you live greener and more sustainably</h2>
+</div>
+<div class="main__title-right mission__title-right">
 <span>Small steps matter </span>
 </div>
 </div>
 </div>
-</div>
 </section>
-<section class="section posts" >
-<div class="wrap">
-<div class="posts-wrap container">
-<div class="section-text__blue">
+<section class="posts section wrap" >
+<div class="posts__wrap container">
+<div class="section__title-blue">
 <span>Join the conversation an help us create a new world!</span>
 </div>
-<div class="section-title">
+<div class="section__title">
 <h3>Recent Posts</h3>
 </div>
-<div class="gallery">
-<figure class="gallery-item gallery-item__1">
-<img src="img/image62.png" alt="Image 1">
+<div class="posts__block">
+<div class="posts__back">
+<img src="img/icons/EllipsePostLeft.svg" alt="">
+</div>
+<div class="posts__back">
+<p>INSTAGRAM</p>
+</div>
+<div class="posts__back">
+<img src="img/icons/EllipsePostRight.svg" alt="">
+</div>
+<div class="posts__gallery">
+<figure class="posts__gallery-item">
+<img src="img/image62.png" alt="Image1">
 </figure>
-<figure class="gallery-item gallery-item__2">
-<img src="img/image7.png" alt="Image 2">
+<figure class="posts__gallery-item">
+<img src="img/image7.png" alt="Image2">
 </figure>
-<figure class="gallery-item gallery-item__3">
-<img src="img/image8.png" alt="Image 3">
+<figure class="posts__gallery-item">
+<img src="img/image8.png" alt="Image3">
 </figure>
-<figure class="gallery-item gallery-item__4">
-<img src="img/image66.png" alt="Image 4">
+<figure class="posts__gallery-item">
+<img src="img/image66.png" alt="Image4">
 </figure>
-<figure class="gallery-item gallery-item__5">
-<img src="img/image35.png" alt="Image 5">
+<figure class="posts__gallery-item">
+<img src="img/image35.png" alt="Image5">
 </figure>
-<figure class="gallery-item gallery-item__6">
-<img src="img/image67.png" alt="Image 6">
+<figure class="posts__gallery-item">
+<img src="img/image67.png" alt="Image6">
 </figure>
-<figure class="gallery-item gallery-item__7">
-<img src="img/image61.png"  alt="Image 7">
+<figure class="posts__gallery-item">
+<img src="img/image61.png"  alt="Image7">
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section class="section blog">
-<div class="wrap">
-<div class="blog-wrap container">
-<div class="section-title">
+<section class="blog section wrap">
+<div class="blog__wrap container">
+<div class="blog__back">
+<img src="img/line_bg.png" alt="">
+</div>
+<div class="section__title">
 <h3>What's new in blog?</h3>
 </div>
-<ul class="section-list blog-list">
-<li class="section-list__item blog-item">
-<div class="section-list__img blog-item__img">
+<ul class="section__list blog__list">
+<li class="section__list-item blog__list-item">
+<div class="section__list-img blog__list-img">
 <img src="img/1.png" alt="">
 </div>
-<div class="blog-item__block">
-<div class="section-list__title">
+<div class="blog__item-text">
+<div class="section__list-title">
 <h3>Why KIWI Eco Box?</h3>
 </div>
-<div class="section-desc">
+<div class="section__desc">
 <p>Get started by signing up for monthly subscription. We bring you an easy way to start your zero-waste journey</p>
 </div>
-<div class="section-button blog-button">
-<button class="section-button__item">Read more</button>
+<div class="blog__button-wrap">
+<div class="section__button blog__button ">
+<a href="#">Read more</a>
+</div>
 </div>
 </div>
 </li>
-<li class="section-list__item blog-item">
-<div class="section-list__img blog-item__img">
+<li class="section__list-item blog__list-item">
+<div class="section__list-img blog__list-img">
 <img src="img/2.png" alt="">
 </div>
-<div class="blog-item__block">
-<div class="section-list__title">
+<div class="blog__item-text">
+<div class="section__list-title">
 <h3>What Is Inside The April Kiwi Eco Box? Portable Lunch Box</h3>
 </div>
-<div class="section-desc">
+<div class="section__desc">
 <p>Every month receive your box with essential products, but plastic free and safe for the environment</p>
 </div>
-<div class="section-button blog-button">
-<button class="section-button__item">Read more</button>
+<div class="blog__button-wrap">
+<div class="section__button blog__button ">
+<a href="#">Read more</a>
+</div>
 </div>
 </div>
 </li>
-<li class="section-list__item blog-item">
-<div class="section-list__img blog-item__img">
+<li class="section__list-item blog__list-item">
+<div class="section__list-img blog__list-img">
 <img src="img/3.png" alt="">
 </div>
-<div class="blog-item__block">
-<div class="section-list__title">
+<div class="blog__item-text">
+<div class="section__list-title">
 <h3>Make a Difference</h3>
 </div>
-<div class="section-desc">
+<div class="section__desc">
 <p>Small steps can lead to bigger changes, and now you are the change. Let's build community of people who care</p>
 </div>
-<div class="section-button blog-button">
-<button class="section-button__item">Read more</button>
+<div class="blog__button-wrap">
+<div class="section__button blog__button ">
+<a href="#">Read more</a>
+</div>
 </div>
 </div>
 </li>
 </ul>
 </div>
-</div>
 </section>
-<section class="section signin">
-<div class="wrap">
-<div class="signin-wrap container">
-<div class="signin-title">
-<div class="section-text__blue">
+<section class="signin section wrap">
+<div class="signin__wrap container">
+<div class="signin__title">
+<div class="section__title-blue">
 <span>Stay in the know</span>
 </div>
-<div class="section-title">
+<div class="section__title">
 <h3>Hear about the latest sneak peaks and spoilers</h3>
 </div>
 </div>
-<div class="main-title signin-text ">
+<div class="signin__title">
+<div class="main__title">
 <h2>Get CAUSEBOX delivered directly </h2>
 <p>to your inbox!</p>
 </div>
-<div class="signin-main">
-<div class="signin-block">
-<form class="signin-form" action="#" id="signin-form">
-<input class="signin-input" type="email" placeholder="Your email address" required>
-<div class="signin-button section-button">
-<button type="submit" class="section-button__item signin-button" data-modal="#modal">Sign up</button>
+</div>
+<div class="signin__main">
+<div class="signin__block">
+<form class="signin__form" action="#" id="signin__form">
+<input class="signin__input" type="email" placeholder="Your email address" required>
+<div class="signin__button section__button">
+<button type="submit" class="signin__button" data-modal="#modal">Sign up</button>
 </div>
 <div id="modal" class="modal">
 <div class="modal-content">
@@ -305,7 +349,7 @@
 <div class="modal-desc section-list__title">
 <h3>Now you will receive alerts when new news and boxes are released!</h3>
 </div>
-<div class="signin-button section-button">
+<div class="signin-button section__button">
 <button class="section-button__item modal-close">good</button>
 </div>
 </div>
@@ -313,43 +357,57 @@
 </div>
 <div class="modal-back modal-hidden" id="modal-back"></div>
 </form>
-<div class="signin-form__desc">
+<div class="signin__back">
+<img src="img/plantss.png" alt="">
+</div>
+<div class="signin__form-desc">
 <p>By clicking "sign up" you agree to receive emails from CAUSEBOX and accept our web terms of use and privacy and cookie policy</p>
 </div>
 </div>
-</div>
-<div class="signin-img">
+<div class="signin__block">
+<div class="signin__img">
 <img src="img/form.png" alt="">
 </div>
 </div>
 </div>
+</div>
+</div>
 </section>
-<section class="section clients">
-<div class="wrap">
-<div class="clients-wrap container">
-<div class="section-text__blue">
+<section class="clients section  wrap">
+<div class="clients__wrap container">
+<div class="clients__back">
+<img src="img/icons/clTop.svg" alt="">
+</div>
+<div class="clients__back">
+<img src="img/icons/ellipseTwo.svg" alt="">
+</div>
+<div class="clients__back">
+<img src="img/icons/clientWaveBig.svg" alt="">
+</div>
+<div class="section__title-blue">
 <span>What do our</span>
 </div>
-<div class="section-title clients-title">
+<div class="section__title clients__title">
 <h3>clients say</h3>
 </div>
-<div class="clients-block">
-<div class="clients-img">
-<img src="img/clients.png" alt="">
+<div class="clients__block">
+<div class="clients__img">
+<img src="img/cl.png" alt="">
 </div>
-<div class="clients-review">
-<div class="clients-review__slider">
-<div class="clients-review__item">
-<div class="clients-info">
-<div class="clients-img__mob">
+<div class="clients__review">
+<div class="clients__review-slider slider  ">
+<div class="slider__item">
+<div class="clients__review-item">
+<div class="clients__info">
+<div class="clients__img-mob">
 <img src="img/mobClient.png" alt="">
 </div>
-<div class="clients-author">
+<div class="clients__author">
 <span>Jessica T.</span>
 </div>
 </div>
-<div class="clients-review__text">
-<div class="clients-review__scroll section-desc">
+<div class="clients__review-text">
+<div class="clients__review-scroll section__desc">
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 <p>Sit amet, consectetur adipiscing elit,  Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
 <p>Sit amet, consectetur adipiscing elit, Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
@@ -359,18 +417,20 @@
 </div>
 </div>
 </div>
-<div class="clients-review__item">
-<div class="clients-info">
-<div class="clients-img__mob">
+</div>
+<div class="slider-item">
+<div class="clients__review-item">
+<div class="clients__info">
+<div class="clients__img-mob">
 <img src="img/mobClient.png" alt="">
 </div>
-<div class="clients-author">
-<span>Robert B.</span>
+<div class="clients__author">
+<span>T.</span>
 </div>
 </div>
-<div class="clients-review__text">
-<div class="clients-review__scroll section-desc">
-<p>Sit amet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+<div class="clients__review-text">
+<div class="clients__review-scroll section__desc">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 <p>Sit amet, consectetur adipiscing elit,  Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
 <p>Sit amet, consectetur adipiscing elit, Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
 <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
@@ -379,18 +439,20 @@
 </div>
 </div>
 </div>
-<div class="clients-review__item">
-<div class="clients-info">
-<div class="clients-img__mob">
+</div>
+<div class="slider-item">
+<div class="clients__review-item">
+<div class="clients__info">
+<div class="clients__img-mob">
 <img src="img/mobClient.png" alt="">
 </div>
-<div class="clients-author">
-<span>Alina.B.</span>
+<div class="clients__author">
+<span>Rob T.</span>
 </div>
 </div>
-<div class="clients-review__text">
-<div class="clients-review__scroll section-desc">
-<p>Consectetur adipiscing elit, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+<div class="clients__review-text">
+<div class="clients__review-scroll section__desc">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 <p>Sit amet, consectetur adipiscing elit,  Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
 <p>Sit amet, consectetur adipiscing elit, Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
 <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
@@ -399,50 +461,98 @@
 </div>
 </div>
 </div>
-<div class="prev" onclick="plusSlides(-1)"></div>
-<div class="next" onclick="plusSlides(1)"></div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<footer class="footer">
-<div class="wrap">
-<div class="footer-wrap container">
-<div class="footer-block">
-<ul class="footer-list">
-<li class="footer-list__item"><a href="">Home</a></li>
-<li class="footer-list__item footer-list__desc"><a href="">Boxes</a></li>
-<li class="footer-list__item footer-list__mob"><a href="">What's inside</a></li>
-<li class="footer-list__item footer-list__mob"><a href="">Kiwi Eco Box</a></li>
-<li class="footer-list__item"><a href="">About</a></li>
-<li class="footer-list__item"><a href="">Account</a></li>
-<li class="footer-list__item"><a href="">blog</a></li>
+<footer class="footer wrap">
+<div class="footer__wrap container">
+<div class="footer__block">
+<ul class="footer__list">
+<li class="footer__list-item"><a href="">Home</a></li>
+<li class="footer__list-item footer__list-desc"><a href="">Boxes</a></li>
+<li class="footer__list-item footer__list-mob"><a href="">What's inside</a></li>
+<li class="footer__list-item footer__list-mob"><a href="">Kiwi Eco Box</a></li>
+<li class="footer__list-item"><a href="">About</a></li>
+<li class="footer__list-item"><a href="">Account</a></li>
+<li class="footer__list-item"><a href="">blog</a></li>
 </ul>
-<div class="footer-logo">
-<img src="img/footer.png" alt="logo">
+<div class="footer__logo">
+<a href="#"><img src="img/footer.png" alt="logo"></a>
 </div>
-<ul class="footer-list">
-<li class="footer-list__item"><a href="">Faq</a></li>
-<li class="footer-list__item"><a href="">CONTACT US</a></li>
-<ul class="footer-list footer-social">
-<li class="footer-list__item"><a href=""></a></li>
-<li class="footer-list__item"><a href=""></a></li>
-<li class="footer-list__item"><a href=""></a></li>
-<li class="footer-list__item"><a href=""></a></li>
+<ul class="footer__list">
+<li class="footer__list-item"><a href="">Faq</a></li>
+<li class="footer__list-item"><a href="">CONTACT US</a></li>
+<ul class="footer__list footer__social">
+<li class="footer__list-item">
+<a href="">
+<svg class="footer__svg">
+<use href="#icon-facebook"></use>
+</svg>
+</a>
+</li>
+<li class="footer__list-item">
+<a href="">
+<svg class="footer__svg">
+<use href="#icon-instagram"></use>
+</svg>
+</a>
+</li>
+<li class="footer__list-item">
+<a href="">
+<svg class="footer__svg">
+<use href="#icon-twitter"></use>
+</svg>
+</a>
+</li>
+<li class="footer__list-item">
+<a href="">
+<svg class="footer__svg">
+<use href="#icon-youtube"></use>
+</svg>
+</a>
+</li>
 </ul>
 </ul>
 </div>
-<div class="footer-block footer-bottom">
+<div class="footer__block">
+<div class="footer__list-text">
 <span>Kiwi Eco Box © 2021</span>
-<div class="footer-list__icon">
-<span>Development by SheepFish</span>
 </div>
+<div class="footer__list-text">
+<span>Development by SheepFish</span>
+<a href="">
+<img src="img/icons/sheepfish.svg" alt="">
+</a>
 </div>
 </div>
 </div>
 </footer>
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-facebook" viewBox="0 0 32 32">
+<path  d="M13.931 24.25h3.218c0.276 0 0.5-0.224 0.5-0.5v-7.244h1.672c0.256 0 0.471-0.194 0.497-0.449l0.282-2.736c0.015-0.141-0.031-0.281-0.126-0.386s-0.23-0.165-0.371-0.165h-1.954v-1.108c0-0.229 0.072-0.246 0.183-0.246h1.73c0.276 0 0.5-0.224 0.5-0.5v-2.656c0-0.275-0.223-0.499-0.498-0.5l-2.386-0.010c-1.672 0-2.564 0.736-3.018 1.353-0.634 0.862-0.729 1.871-0.729 2.396v1.271h-1.031c-0.276 0-0.5 0.224-0.5 0.5v2.736c0 0.276 0.224 0.5 0.5 0.5h1.031v7.244c0 0.276 0.224 0.5 0.5 0.5zM12.9 15.506v-1.736h1.031c0.276 0 0.5-0.224 0.5-0.5v-1.771c0-0.324 0.052-1.149 0.534-1.804 0.462-0.627 1.206-0.945 2.211-0.945l1.886 0.008v1.658h-1.23c-0.589 0-1.183 0.385-1.183 1.246v1.608c0 0.276 0.224 0.5 0.5 0.5h1.9l-0.179 1.736h-1.721c-0.276 0-0.5 0.224-0.5 0.5v7.244h-2.218v-7.244c0-0.276-0.224-0.5-0.5-0.5h-1.030z"></path>
+<path  d="M27.314 4.686c-3.022-3.022-7.040-4.686-11.314-4.686s-8.291 1.664-11.313 4.686-4.686 7.040-4.686 11.314c0 4.274 1.664 8.292 4.686 11.314s7.040 4.686 11.313 4.686c4.274 0 8.292-1.664 11.314-4.686s4.686-7.040 4.686-11.314c0-4.274-1.664-8.291-4.686-11.313zM26.607 26.607c-2.833 2.833-6.6 4.393-10.607 4.393s-7.773-1.56-10.606-4.393c-2.833-2.833-4.394-6.6-4.394-10.607s1.56-7.773 4.394-10.606c2.833-2.833 6.6-4.394 10.606-4.394s7.774 1.56 10.607 4.394c2.833 2.833 4.393 6.6 4.393 10.606s-1.56 7.774-4.393 10.607z"></path>
+</symbol>
+<symbol id="icon-instagram" viewBox="0 0 32 32">
+<path  d="M27.314 4.687c-3.022-3.022-7.040-4.687-11.314-4.687s-8.291 1.664-11.313 4.687c-3.022 3.022-4.687 7.040-4.687 11.313s1.664 8.292 4.687 11.314c3.022 3.022 7.040 4.686 11.313 4.686s8.292-1.664 11.314-4.686c3.022-3.022 4.686-7.040 4.686-11.314s-1.664-8.292-4.686-11.313zM26.607 26.607c-2.833 2.833-6.6 4.393-10.607 4.393s-7.773-1.56-10.606-4.393c-2.833-2.833-4.394-6.6-4.394-10.607s1.56-7.773 4.394-10.606 6.6-4.394 10.606-4.394c4.007 0 7.773 1.56 10.607 4.394s4.393 6.6 4.393 10.606c0 4.007-1.56 7.774-4.393 10.607z"></path>
+<path  d="M20.202 7.978h-8.373c-2.123 0-3.85 1.727-3.85 3.85v8.373c0 2.123 1.727 3.85 3.85 3.85h8.373c2.123 0 3.85-1.727 3.85-3.85v-8.373c0-2.123-1.727-3.85-3.85-3.85zM23.039 20.202c0 1.564-1.272 2.837-2.836 2.837h-8.373c-1.564 0-2.836-1.273-2.836-2.837v-8.373c0-1.564 1.272-2.836 2.836-2.836h8.373c1.564 0 2.836 1.272 2.836 2.836v8.373z"></path>
+<path  d="M20.508 10.916c-0.34 0-0.617 0.277-0.617 0.617s0.277 0.617 0.617 0.617c0.34 0 0.617-0.277 0.617-0.617s-0.277-0.617-0.617-0.617z"></path>
+<path  d="M16.015 12.076c-2.172 0-3.94 1.767-3.94 3.94s1.767 3.94 3.94 3.94c2.172 0 3.94-1.767 3.94-3.94s-1.768-3.94-3.94-3.94zM16.015 18.941c-1.613 0-2.926-1.313-2.926-2.926s1.313-2.925 2.926-2.925c1.613 0 2.926 1.312 2.926 2.925s-1.312 2.926-2.926 2.926z"></path>
+</symbol>
+<symbol id="icon-twitter" viewBox="0 0 32 32">
+<path d="M27.314 4.686c-3.022-3.022-7.040-4.686-11.314-4.686s-8.291 1.664-11.313 4.686-4.686 7.040-4.686 11.314c0 4.274 1.664 8.292 4.686 11.314s7.040 4.686 11.313 4.686c4.274 0 8.292-1.664 11.314-4.686s4.686-7.040 4.686-11.314c0-4.274-1.664-8.291-4.686-11.313zM26.607 26.607c-2.833 2.833-6.6 4.393-10.607 4.393s-7.773-1.56-10.606-4.393c-2.833-2.833-4.394-6.6-4.394-10.607s1.56-7.773 4.394-10.606c2.833-2.833 6.6-4.394 10.606-4.394s7.774 1.56 10.607 4.394c2.833 2.833 4.393 6.6 4.393 10.606s-1.56 7.774-4.393 10.607z"></path>
+<path d="M24.916 12.173c0.123-0.185 0.11-0.429-0.033-0.599s-0.381-0.225-0.585-0.135c-0.013 0.006-0.026 0.011-0.038 0.017 0.118-0.211 0.215-0.434 0.289-0.667 0.063-0.198-0.002-0.414-0.165-0.544s-0.388-0.145-0.567-0.039c-0.504 0.3-1.044 0.52-1.608 0.656-0.675-0.611-1.563-0.957-2.478-0.957-2.029 0-3.68 1.65-3.68 3.678 0 0.058 0.001 0.116 0.004 0.174-2.179-0.266-4.19-1.37-5.589-3.087-0.104-0.127-0.263-0.195-0.427-0.183s-0.31 0.105-0.393 0.247c-0.326 0.559-0.498 1.199-0.498 1.85 0 0.622 0.155 1.221 0.441 1.751-0.077 0.005-0.152 0.028-0.22 0.068-0.153 0.090-0.246 0.254-0.246 0.431v0.040c0 1.102 0.494 2.112 1.288 2.795-0.017 0.015-0.034 0.031-0.049 0.048-0.116 0.132-0.155 0.315-0.101 0.483 0.342 1.068 1.141 1.896 2.142 2.295-0.813 0.409-1.71 0.621-2.645 0.621-0.236 0-0.472-0.014-0.701-0.040-0.231-0.027-0.45 0.109-0.529 0.328s0.005 0.463 0.201 0.589c1.538 0.987 3.317 1.508 5.145 1.508 3.591 0 5.839-1.695 7.093-3.118 1.561-1.77 2.455-4.114 2.455-6.431 0-0.057-0-0.113-0.001-0.167 0.581-0.454 1.083-0.996 1.494-1.612zM22.621 13.136c-0.137 0.099-0.215 0.261-0.207 0.43 0.006 0.123 0.009 0.249 0.009 0.386 0 2.076-0.804 4.179-2.206 5.769-1.117 1.268-3.125 2.779-6.343 2.779-0.984 0-1.953-0.169-2.868-0.496 1.094-0.198 2.118-0.657 3.010-1.356 0.166-0.131 0.233-0.352 0.166-0.552s-0.253-0.337-0.465-0.341c-0.88-0.017-1.677-0.46-2.158-1.158 0.251-0.015 0.5-0.056 0.744-0.122 0.224-0.060 0.377-0.267 0.369-0.499s-0.173-0.428-0.401-0.474c-0.996-0.201-1.774-0.949-2.045-1.891 0.267 0.071 0.543 0.111 0.82 0.121 0.224 0.008 0.424-0.134 0.493-0.347s-0.013-0.445-0.198-0.569c-0.746-0.498-1.192-1.332-1.192-2.232 0-0.228 0.029-0.454 0.085-0.672 1.676 1.73 3.957 2.774 6.375 2.895 0.158 0.008 0.308-0.059 0.409-0.179s0.139-0.281 0.103-0.434c-0.046-0.197-0.069-0.402-0.069-0.611 0-1.477 1.202-2.678 2.68-2.678 0.738 0 1.451 0.308 1.957 0.845 0.118 0.125 0.292 0.181 0.46 0.148 0.189-0.037 0.377-0.082 0.562-0.135-0.093 0.074-0.191 0.142-0.294 0.203-0.202 0.121-0.292 0.367-0.216 0.59s0.297 0.363 0.532 0.335c0.081-0.009 0.163-0.020 0.244-0.033-0.115 0.097-0.233 0.189-0.355 0.277z"></path>
+</symbol>
+<symbol id="icon-youtube" viewBox="0 0 32 32">
+<path d="M27.314 4.686c-3.022-3.022-7.040-4.686-11.314-4.686s-8.291 1.664-11.313 4.686-4.686 7.040-4.686 11.314c0 4.274 1.664 8.292 4.686 11.314s7.040 4.686 11.313 4.686c4.274 0 8.292-1.664 11.314-4.686s4.686-7.040 4.686-11.314c0-4.274-1.664-8.291-4.686-11.313zM26.607 26.607c-2.833 2.833-6.6 4.393-10.607 4.393s-7.773-1.56-10.606-4.393c-2.833-2.833-4.394-6.6-4.394-10.607s1.56-7.773 4.394-10.606c2.833-2.833 6.6-4.394 10.606-4.394s7.774 1.56 10.607 4.394c2.833 2.833 4.393 6.6 4.393 10.606s-1.56 7.774-4.393 10.607z"></path>
+<path d="M24.613 12.451c-0.019-0.14-0.198-1.383-0.78-2.015-0.695-0.774-1.487-0.854-1.867-0.893-0.033-0.003-0.064-0.006-0.091-0.010-0.007-0.001-0.015-0.002-0.022-0.002-2.297-0.178-5.765-0.18-5.8-0.18h-0.008c-0.035 0-3.502 0.002-5.799 0.18-0.008 0.001-0.015 0.001-0.022 0.002-0.027 0.003-0.058 0.006-0.091 0.010-0.38 0.039-1.171 0.119-1.867 0.893-0.582 0.632-0.761 1.875-0.78 2.015-0 0.003-0.001 0.006-0.001 0.008-0.007 0.059-0.168 1.466-0.168 2.9v1.332c0 1.435 0.161 2.841 0.168 2.9 0 0.003 0.001 0.005 0.001 0.008 0.019 0.14 0.198 1.382 0.78 2.014 0.644 0.716 1.459 0.82 1.898 0.877 0.077 0.010 0.144 0.018 0.189 0.028 0.015 0.003 0.031 0.005 0.047 0.007 1.325 0.136 5.469 0.177 5.651 0.179 0.035 0 3.505-0.008 5.802-0.184 0.009-0.001 0.017-0.002 0.025-0.003 0.028-0.004 0.060-0.007 0.094-0.010 0.38-0.040 1.169-0.122 1.862-0.893 0.582-0.631 0.762-1.874 0.78-2.014 0-0.003 0.001-0.006 0.001-0.008 0.007-0.059 0.168-1.466 0.168-2.9v-1.332c0-1.434-0.161-2.841-0.168-2.9-0-0.003-0.001-0.005-0.001-0.008zM23.782 16.691c0 1.337-0.151 2.696-0.161 2.781-0.038 0.278-0.212 1.127-0.525 1.465-0.002 0.002-0.004 0.004-0.006 0.006-0.436 0.487-0.91 0.536-1.224 0.569-0.037 0.004-0.072 0.008-0.104 0.012-2.259 0.172-5.681 0.18-5.71 0.18-0.042-0.001-4.227-0.043-5.532-0.172-0.072-0.013-0.15-0.023-0.232-0.034-0.374-0.048-0.887-0.114-1.284-0.556-0.002-0.002-0.004-0.004-0.006-0.006-0.278-0.3-0.469-1.056-0.525-1.465-0.010-0.087-0.161-1.444-0.161-2.781v-1.332c0-1.338 0.151-2.697 0.161-2.781 0.038-0.278 0.212-1.128 0.525-1.467 0.002-0.002 0.003-0.004 0.005-0.006 0.438-0.488 0.912-0.536 1.226-0.568 0.036-0.004 0.070-0.007 0.101-0.011 2.258-0.174 5.677-0.176 5.711-0.176h0.008c0.034 0 3.453 0.002 5.712 0.176 0.031 0.004 0.064 0.007 0.101 0.011 0.314 0.032 0.788 0.080 1.226 0.568 0.002 0.002 0.004 0.004 0.005 0.006 0.278 0.3 0.469 1.057 0.525 1.467 0.010 0.087 0.161 1.445 0.161 2.781l0 1.332z"></path>
+<path d="M19.397 15.599l-5.147-3.088c-0.154-0.093-0.347-0.095-0.504-0.006s-0.254 0.255-0.254 0.435v6.177c0 0.18 0.097 0.346 0.254 0.435 0.076 0.043 0.161 0.065 0.246 0.065 0.089 0 0.178-0.024 0.257-0.071l5.147-3.088c0.151-0.090 0.243-0.253 0.243-0.429s-0.092-0.338-0.243-0.429zM14.493 18.233v-4.411l3.676 2.205-3.676 2.205z"></path>
+</symbol>
+</defs>
+</svg>
 </main>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -450,27 +560,3 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/app.min.js"></script>
 </html>
-<!--<form class="signin-formdd" method="post" action="" data-toggle="modal" id="myForm">-->
-<!--    <input class="signin-input" type="email" placeholder="Your email address" required>-->
-<!--    <div class="signin-button section-button">-->
-<!--        <button type="submit" class="section-button__item signin-button" data-modal="#modal">Sign up</button>-->
-<!--    </div>-->
-<!--</form>-->
-<!--<div class="modal fade" id="myModal" role="dialog">-->
-<!--    <div class="modal-dialog">-->
-<!--        <div class="modal-content">-->
-<!--            <div class="modal-img">-->
-<!--                <img src="img/modal-img.png" alt="">-->
-<!--            </div>-->
-<!--            <div class="modal-block">-->
-<!--                <div class="modal-title">-->
-<!--                    <p>Thank you for <span>subscribing!</span></p>-->
-<!--                </div>-->
-<!--                <div class="modal-desc">-->
-<!--                    <p>Now you will receive alerts when new news and boxes are released!</p>-->
-<!--                </div>-->
-<!--                <button class="section-button__item modal-close">good</button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->

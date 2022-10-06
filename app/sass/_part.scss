@@ -16,7 +16,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 html {
-  font-size: 62.5%;
+  font-size: 10px;
 }
 ol, ul {
   list-style: none;
@@ -49,6 +49,12 @@ q:before, q:after, blockquote:before, blockquote:after {
 
 a img {
   border: none;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
