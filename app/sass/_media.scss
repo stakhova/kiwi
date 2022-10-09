@@ -19,9 +19,6 @@
   html{
     font-size: 8.75px;
   }
-  //.signin__img{
-  //  right: -29rem;
-  //}
 }
 @media only screen and (max-width: 1440px) {
   html{
@@ -152,6 +149,11 @@
     font-size: 1.4rem;
     line-height: 2.1rem;
 
+  }
+  .mission__text:before{
+    left: 50%;
+    top: -2.5rem;
+    transform: translate(-50%);
   }
   .mission-title__right {
     top: 1rem;
@@ -393,7 +395,7 @@
     font-weight: 700;
     font-size: 1.2rem;
     line-height: 1.4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .posts__gallery {
@@ -468,12 +470,11 @@
   }
 
   .work__item .section__list-img{
-    max-width: 21.1rem ;
-    max-height: 15.9rem;
+    width: auto;
+    height: 15.9rem;
   }
-
-  .work__item:first-child .section__list-img{
-    max-width: 27.6rem ;
+  .work__block{
+    margin-top: 3rem;
   }
   .work__item{
     margin: 0;
@@ -501,7 +502,7 @@
     line-height: 2.1rem;
   }
   .work  .section__list-title>*{
-    padding-bottom: 1rem;
+    padding: 3rem 0 1rem;
   }
   .blog__list-item{
     margin: 0 2rem!important;
@@ -547,8 +548,9 @@
   }
   .box__title:before{
     left: 50%;
-    transform: translate(50%);
-    top: -3rem;
+    transform: translate(-50%);
+    top: -2.5rem;
+    position: relative;
   }
   .box__block{
     flex-direction: column-reverse;
@@ -560,7 +562,7 @@
 
   }
   .box__desc{
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
   }
   .box__img{
     margin: 0;
@@ -632,7 +634,7 @@
     margin: 0 auto;
   }
   .mission__wrap{
-    padding-bottom: 11rem;
+    padding: 7rem 1.5rem 11rem;
   }
   .header__mob{
     display: block;
@@ -705,13 +707,15 @@
     max-height: 5rem;
     margin:0.5rem 2rem;
   }
-  .header__item-mob
+  //.header__item-mob
   .header__item:not(:nth-child(3)){
     padding: 0;
     margin-bottom: 5.1rem ;
   }
   .header__item:not(:nth-child(3)):before{
-    content: url("../img/icon/wave.svg");
+    content: url("../img/icons/waveLittle.svg");
+    width: 4.8rem;
+    height: 0.5rem;
     position: absolute;
     top: 4rem;
     left: 50%;
@@ -781,12 +785,17 @@
   }
   .signin__img{
     top: 0;
-    left: 0;
+    left: -1rem;
     position: relative;
-    max-width: 32rem;
-    max-height: 21.9rem;
+    width: 32rem;
+    height: 21.9rem;
     margin: 0 auto;
 
+  }
+  .signin__title:first-child:before{
+    left: 50%;
+    transform: translate(-50%);
+    top: -2rem;
   }
   .signin .main__title > p{
     font-size: 3.2rem;
@@ -817,6 +826,12 @@
     top: 6rem;
     left: 50%;
     transform: translate(-50% );
+  }
+  .clients__name:after{
+    bottom: -2rem;
+  }
+  .signin__img-wrap{
+    margin: -1rem 0;
   }
 }
 @media only screen and (max-width: 480px) {
