@@ -54,215 +54,6 @@
 }
 @media only screen and (max-width: 666px) {
 
-  .signin-text h2, .signin-text p{
-    font-size: 3.6rem;
-    line-height: 3.6rem;
-  }
-  .signin__form{
-    background-color: transparent;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 0;
-  }
-  .signin__block:first-child{
-    max-width: 100%;
-  }
-  .signin__main{
-    display: block;
-  }
-  .signin__input{
-    padding: 2rem ;
-    border: 0.1rem solid #74E6CF;
-    margin: 0 auto 2rem;
-    width: 28.8rem;
-  }
-  .signin__form-desc{
-    text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-    width: 28.8rem;
-    margin: 0 auto;
-
-  }
-  .main {
-    padding: 2rem 0;
-  }
-
-  .main-block__little {
-    flex-direction: row;
-
-    img {
-      margin: 0 5rem;
-      max-width: 10rem;
-    }
-  }
-  .main-block {
-    margin: 5rem 0 18.5rem;
-  }
-  .main-block__big {
-    position: relative;
-
-    img {
-      max-width: 25rem;
-      position: absolute;
-      left: 50%;
-      top: 1rem;
-      transform: translate(-50%);
-    }
-
-    &:after {
-      display: block;
-      content: url("../img/icon/mobafter.svg");
-      top: 0rem;
-      right: -1rem;
-      transform: translate(50%);
-      z-index: 0;
-    }
-
-    &:before {
-      display: block;
-      content: url("../img/icon/elipseMob.svg");
-      top: 5rem;
-      right: -4rem;
-      transform: translate(50%);
-      z-index: 0;
-    }
-  }
-  .main-title h2 {
-    letter-spacing: 0.15rem;
-    font-size: 3.2rem;
-    line-height: 3.2rem;
-  }
-  .main-title__right {
-    left: calc(50% - 13rem);
-    font-size: 2.6rem;
-    top: 4rem;
-  }
-  .main-title__right p {
-    top: 0;
-    left: 15rem;
-  }
-
-
-
-  .section-desc {
-    font-size: 1.4rem;
-    line-height: 2.1rem;
-
-  }
-  .mission__text:before{
-    left: 50%;
-    top: -2.5rem;
-    transform: translate(-50%);
-  }
-  .mission-title__right {
-    top: 1rem;
-    left: 50%;
-    transform: translate(-50%);
-  }
-  .mission-wrap {
-    .main-title h2 {
-      font-size: 3rem;
-      letter-spacing: 0.05rem;
-    }
-  }
-  .mission-title__right, .mission-title__right span {
-    top: auto;
-    bottom: -2.5rem;
-  }
-
-
-  .posts-wrap{
-    padding-bottom: 2rem;
-  }
-  .blog-item__block{
-    padding: 3rem 2rem ;
-  }
-  .blog .section-desc p {
-    max-height: 5.2rem;
-  }
-    .blog .section-desc{
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-  }
-  .blog .section-desc:before {
-    top: 1rem;
-  }
-  .section-button {
-    top: -1.5rem;
-  }
-  .box-wrap .section-button {
-    bottom: -35rem;
-    top: auto;
-  }
-  .signin-block:before{
-    display: none;
-  }
-  .signin-form{
-    padding: 0;
-    max-width: 28.8rem;
-  }
-  .modal{
-    height: auto;
-    border: none;
-    margin: 0 1rem;
-
-  }
-  .modal__desc{
-    padding: 5.4rem 1rem 2.4rem ;
-  }
-  .modal__desc:after {
-    top: 1.5rem;
-  }
-
-  .modal__content{
-    flex-direction: column;
-  }
-
-  .modal__img-wrap{
-    width: 100%;
-    height: 15rem;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 2rem;
-  }
-  .modal__img {
-    max-width: 12.1rem;
-    max-height: 15rem;
-  }
-  .modal__block {
-    width: 100%;
-    padding: 3rem 0 0 0 ;
-  }
-  .modal .section__button{
-    width: 100%;
-    margin: 0;
-  }
-
-  .modal button{
-    border-radius: 0;
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-  }
-  .modal__title>*{
-    font-size: 2.4rem;
-    line-height: 2.8rem;
-    font-family: $AP;
-  }
-  .signin-img {
-    max-width: 32rem;
-    max-height: 21.9rem;
-  }
-
-  .signin-title {
-    margin: 0 auto 28rem;
-  }
-  .signin-form:before{
-    display: none;
-  }
-
-
-
-
   html{
     font-size: 10px;
   }
@@ -312,6 +103,53 @@
   }
   .footer:after {
     bottom: 5rem;
+  }
+
+  .modal{
+    height: auto;
+    border: none;
+    margin: 0 1rem;
+
+  }
+  .modal__desc{
+    padding: 5.4rem 1rem 2.4rem ;
+  }
+  .modal__desc:after {
+    top: 1.5rem;
+  }
+
+  .modal__content{
+    flex-direction: column;
+  }
+
+  .modal__img-wrap{
+    width: 100%;
+    height: 15rem;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 2rem;
+  }
+  .modal__img {
+    max-width: 12.1rem;
+    max-height: 15rem;
+  }
+  .modal__block {
+    width: 100%;
+    padding: 3rem 0 0 0 ;
+  }
+  .modal .section__button{
+    width: 100%;
+    margin: 0;
+  }
+
+  .modal button{
+    border-radius: 0;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+  .modal__title>*{
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    font-family: $AP;
   }
   .section__list-item:not(:last-child) {
     margin-right: 8.5rem;
@@ -598,6 +436,14 @@
     left: 50%;
     transform: translate(-50%);
   }
+  .main__img{
+    width: 7.4rem;
+    height: 7rem;
+  }
+  .main__img-big{
+    width: 33.5rem;
+    height: 29.7rem;
+  }
   .main__title > *{
     font-size: 3.2rem;
     line-height: 3.2rem;
@@ -606,6 +452,50 @@
   .main__title-right > *{
     font-size: 2.6rem;
     line-height: 4.2rem;
+  }
+  .main__block-left .main__img:first-child{
+    left: 0;
+  }
+  .main__block-right .main__img:last-child{
+    right: 0;
+  }
+  .main{
+    padding: 2rem 0;
+  }
+  .main__title-right{
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .main__block-right{
+    right: 0;
+  }
+  .main__block-left{
+    left: 0;
+  }
+  .main__block-big{
+    position: absolute;
+    top: 2rem;
+  }
+  .main__block{
+    padding-bottom: 23.5rem;
+  }
+  .main__img img{
+    object-fit: none;
+  }
+  .main__title-right{
+    text-align: center;
+  }
+  .main__title-right>p{
+    top: 0;
+    right: -0.2rem;
+    display: inline;
+  }
+  .main__back{
+    width:29.7rem;
+    height:10.3rem;
+    bottom: 16rem;
+    left: calc(50% + 1rem);
   }
   .mission__title-right{
     position: relative;
@@ -635,6 +525,11 @@
   }
   .mission__wrap{
     padding: 7rem 1.5rem 11rem;
+  }
+  .mission__text:before{
+    left: 50%;
+    top: -2.5rem;
+    transform: translate(-50%);
   }
   .header__mob{
     display: block;
@@ -728,9 +623,6 @@
   .header__item-mob{
     display: block;
   }
-  .main__block-big{
-    position: absolute;
-  }
   .clients .slick-prev{
     left: calc(50% - 2rem);
     transform: translate(-50%);
@@ -779,6 +671,32 @@
   }
   .clients__wrap{
     padding-bottom: 10rem;
+  }
+  .signin__form{
+    background-color: transparent;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .signin__block:first-child{
+    max-width: 100%;
+  }
+  .signin__main{
+    display: block;
+  }
+  .signin__input{
+    padding: 2rem ;
+    border: 0.1rem solid #74E6CF;
+    margin: 0 auto 2rem;
+    width: 28.8rem;
+  }
+  .signin__form-desc{
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    width: 28.8rem;
+    margin: 0 auto;
+
   }
   .signin__title{
     margin:  1.5rem 0;

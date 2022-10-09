@@ -147,12 +147,6 @@
   &__logo{
     max-width: 19.1rem;
     max-height: 10rem;
-    //img{
-    //  width: 100%;
-    //  height: 100%;
-    //  object-fit: cover;
-    //  display: block;
-    //}
   }
   &__back{
     display: none;
@@ -198,17 +192,28 @@
 .main{
   background: linear-gradient(129.34deg, #FECA57 56.78%, #E3AA2D 101.94%);
   padding: 6rem 0;
-  &__block, &__block-little{
+  &__block{
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+  }
+  &__block-little{
+    position: relative;
+    display: flex;
   }
   &__block-left{
     left: 15rem;
     .main__img:first-child{
       position:relative;
       left: 11rem;
+    }
+  }
+  &__block-right{
+    right: 15rem;
+    .main__img:last-child{
+      position:relative;
+      right: 11rem;
     }
   }
   &__button{
@@ -219,8 +224,8 @@
     width: 180.7rem;
     height: 67rem;
     position: absolute;
-    bottom: -9rem;
-    left: 50%;
+    bottom: -11rem;
+    left: calc(50% + 3rem);
     transform: translate(-50%);
   }
   &__img{
