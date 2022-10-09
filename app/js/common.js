@@ -45,11 +45,6 @@ $(document).ready(function(){
 
 
 
-document.querySelector('.header-checkbox').addEventListener('change', function(e) {
-    document.body.style.overflow = e.target.checked === true ? 'hidden' : '';
-});
-
-
 
 
 
@@ -90,70 +85,170 @@ document.querySelector('.header-checkbox').addEventListener('change', function(e
 
 
 
-function OpenWin() {
-    "use strict";
+// function OpenWin() {
+//     "use strict";
+//
+//     const backdrop = document.querySelector('.modal-back ');
+//     document.addEventListener('click', modalHandler);
+//
+//     function modalHandler(evt) {
+//         const modalBtnOpen = evt.target.closest('.signin-button');
+//         if (modalBtnOpen) { // open btn click
+//             const modalSelector = modalBtnOpen.dataset.modal;
+//             showModal(document.querySelector(modalSelector));
+//         }
+//
+//         const modalBtnClose = evt.target.closest('.modal-close');
+//         if (modalBtnClose) { // close btn click
+//             evt.preventDefault();
+//             hideModal(modalBtnClose.closest('.modal'));
+//             console.log('ssss')
+//         }
+//
+//         if (evt.target.matches('#modal-back')) { // backdrop click
+//             hideModal(document.querySelector('.modal.show'));
+//         }
+//     }
+//
+//     function showModal(modalElem) {
+//         modalElem.classList.add('show');
+//         backdrop.classList.remove('modal-hidden');
+//         // document.body.style.overflow = 'hidden' ;
+//     }
+//
+//     function hideModal(modalElem) {
+//         modalElem.classList.remove('show');
+//         backdrop.classList.add('modal-hidden');
+//         // document.body.style.overflow = 'auto' ;
+//     }
+//     let form = document.querySelector(".signin-form");
+//     function handleForm(event) { event.preventDefault(); }
+//     form.addEventListener('submit', handleForm);
+// };
 
-    const backdrop = document.querySelector('.modal-back ');
-    document.addEventListener('click', modalHandler);
 
-    function modalHandler(evt) {
-        const modalBtnOpen = evt.target.closest('.signin-button');
-        if (modalBtnOpen) { // open btn click
-            const modalSelector = modalBtnOpen.dataset.modal;
-            showModal(document.querySelector(modalSelector));
-        }
-
-        const modalBtnClose = evt.target.closest('.modal-close');
-        if (modalBtnClose) { // close btn click
-            evt.preventDefault();
-            hideModal(modalBtnClose.closest('.modal'));
-            console.log('ssss')
-        }
-
-        if (evt.target.matches('#modal-back')) { // backdrop click
-            hideModal(document.querySelector('.modal.show'));
-        }
-    }
-
-    function showModal(modalElem) {
-        modalElem.classList.add('show');
-        backdrop.classList.remove('modal-hidden');
-        // document.body.style.overflow = 'hidden' ;
-    }
-
-    function hideModal(modalElem) {
-        modalElem.classList.remove('show');
-        backdrop.classList.add('modal-hidden');
-        // document.body.style.overflow = 'auto' ;
-    }
-    let form = document.querySelector(".signin-form");
-    function handleForm(event) { event.preventDefault(); }
-    form.addEventListener('submit', handleForm);
-};
-
-
-    $("signin-form").validate({
-        rules:{
-            email:{
-                required:true,
-                email: true,
-            }
-        }
-    });
+// $(document).ready(function () {
+//     // initializing
+//     $('#btn').click(function(){
+//         $('.fancybox').open({
+//             src: '#modal',
+//             type: 'inline'
+//         });
+//     });
+//     $('.fancybox').fancybox({
+//         maxWidth: 800,
+//         maxHeight: 600,
+//         fitToView: false,
+//         width: '70%',
+//         height: '90%',
+//         autoSize: false,
+//         closeClick: false,
+//         openEffect: 'none',
+//         closeEffect: 'none'
+//     });
+//     $('#contactForm').validate({
+//         rules: {
+//             name: {
+//                 required: true
+//             },
+//             email: {
+//                 required: true,
+//                 email: true
+//             }
+//         },
+//         messages: {
+//             name: {
+//                 required: "Please enter your full name."
+//             },
+//             email: {
+//                 required: "Please enter your email address."
+//             }
+//         },
+//         submitHandler: function (form) {
+//             //Handle Ajax Method and success  / error here
+//             $(".fancybox").trigger('click');
+//         }
+//     });
+// });
 
 $(document).ready(function(){
-
-    $("#signin-form").submit(function(e) {
-        e.preventDefault();
-        if ($(this).valid()) {
-            e.preventDefault();
-            OpenWin();
-        } else {
-            console.log("nooo")
-            // do error stuff here
-        }
+    $(".header__mob").on("click", function(){
+        $(".header__burger").toggleClass("close-btn");
+        $(".header__menu").toggleClass("open-menu");
+        $("body").css({'overflow' : 'hidden'});
     });
 })
+
+// $(document).ready(function() {
+//     $("#signin__form").validate({
+//         rules: {
+//             required: true,
+//             email: true,
+//         },
+//         messages: {
+//             required: "Required input",
+//             email: "Invalid email"
+//         },
+//         submitHandler: function(form) {
+//             $('#modal-open').click(function(){
+//                 $.fancybox.open({
+//                     src: '#modal',
+//                     type: 'inline'
+//                 });
+//             });
+//         }
+//     });
+// })
+
+$(document).ready(function () {
+    // initializing
+    $('#modal').fancybox({
+        // maxWidth: 800,
+        // maxHeight: 600,
+        // fitToView: false,
+        // width: '70%',
+        // height: '90%',
+        // autoSize: false,
+        // closeClick: false,
+        // openEffect: 'none',
+        // closeEffect: 'none'
+    });
+    $('#signin__form').validate({
+        rules: {
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            email: {
+                required: "Please enter your email address."
+            }
+        },
+        submitHandler: function (form) {
+            //Handle Ajax Method and success  / error here
+            $("#modal").trigger('click');
+        }
+    });
+});
+
+
+
+
+
+// $(document).ready(function(){
+//     $("#signin__form").submit(function(e) {
+//         e.preventDefault();
+//         if ($(this).valid()) {
+//             e.preventDefault();
+//
+//
+//         } else {
+//             console.log("nooo")
+//             // do error stuff here
+//         }
+//     });
+// })
 
 
 
