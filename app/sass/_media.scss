@@ -567,6 +567,9 @@
     z-index: 3;
 
   }
+  .header__item:not(:nth-child(3)):hover:after{
+    display: none;
+  }
   .header__back{
       display: block;
 

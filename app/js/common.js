@@ -175,7 +175,7 @@ $(document).ready(function(){
     $(".header__mob").on("click", function(){
         $(".header__burger").toggleClass("close-btn");
         $(".header__menu").toggleClass("open-menu");
-        $("body").css({'overflow' : 'hidden'});
+        $("body").toggleClass('no-scroll');
     });
 })
 
@@ -201,17 +201,7 @@ $(document).ready(function(){
 // })
 
 $(document).ready(function () {
-    // initializing
     $('#modal').fancybox({
-        // maxWidth: 800,
-        // maxHeight: 600,
-        // fitToView: false,
-        // width: '70%',
-        // height: '90%',
-        // autoSize: false,
-        // closeClick: false,
-        // openEffect: 'none',
-        // closeEffect: 'none'
     });
     $('#signin__form').validate({
         rules: {
@@ -226,7 +216,6 @@ $(document).ready(function () {
             }
         },
         submitHandler: function (form) {
-            //Handle Ajax Method and success  / error here
             $("#modal").trigger('click');
         }
     });

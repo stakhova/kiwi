@@ -1227,6 +1227,8 @@ label.error{
 .fancybox-content{
   padding: 0;
 }
-
+.no-scroll{
+  overflow: hidden;
+}
 
 @import 'media';
