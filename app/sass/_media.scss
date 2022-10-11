@@ -554,6 +554,7 @@
     top: 0rem;
     left: 0;
     z-index: 3;
+    overflow: hidden;
 
   }
   .header__item:not(:nth-child(3)):hover:after{

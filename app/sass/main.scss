@@ -101,6 +101,9 @@
   font-size: 2.4rem;
   line-height: 2.4rem;
   padding:2rem;
+  &__menu{
+    overflow: hidden;
+  }
   &__dropdown{
     display: none;
     position: absolute;
@@ -152,9 +155,9 @@
     display: none;
     max-width: 18.4rem;
     max-height:21rem;
-    position: absolute;
-    bottom: -9rem;
-    right: -9rem;
+    position: relative;
+    bottom: 6rem;
+    right: -23rem;
     overflow: hidden;
     z-index: 2;
   }
