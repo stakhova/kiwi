@@ -17,8 +17,8 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $(".header__mob").on("click", function(){
-        $(".header__burger").toggleClass("close-btn");
-        $(".header__menu").toggleClass("open-menu");
+        $(".header__burger").toggleClass("header__burger-close");
+        $(".header__menu").toggleClass("header__menu-open");
         $("body").toggleClass('no-scroll');
     });
 })

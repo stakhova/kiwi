@@ -2,11 +2,7 @@
 @import 'vars';
 @import 'part';
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+// style html
 html {
   font-size: 10px;
   @media only screen and ( min-width: 2560px) {
@@ -38,7 +34,9 @@ html {
     font-size: 10px;
   }
 }
+//
 
+// style wrap
 .wrap{
   font: $BebasNeue;
   color: $main_color;
@@ -46,7 +44,9 @@ html {
   width:100%;
   overflow: hidden;
 }
+//
 
+//style container
 .container{
   width: 100%;
   max-width: 126rem;
@@ -54,7 +54,9 @@ html {
   padding: 10rem 2rem;
   font: $BebasNeue;
 }
+//
 
+//style section
 .section{
   &:nth-child(odd){
     background-color: $color_background;
@@ -134,14 +136,14 @@ html {
     }
   }
 }
+//
+
+// style header
 .header{
   position: relative;
   font-size: 2.4rem;
   line-height: 2.4rem;
   padding:2rem;
-  //&__menu{
-  //  overflow: hidden;
-  //}
   &__dropdown{
     display: none;
     position: absolute;
@@ -228,8 +230,52 @@ html {
       }
     }
   }
+  &__mob{
+    background: white;
+    position: relative;
+    z-index:4;
+    display: none;
+  }
+  &__burger {
+    top: 2.5rem;
+    right: 1.5rem;
+    height: 1.1rem;
+    width: 1.7rem;
+    position: absolute;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    & > *{
+      height: 0.1rem;
+      width: 1.7rem;
+      display: block;
+      background: $main_color;
+    }
+    &-close{
+      height: 1.4rem;
+      width: 1.4rem;
+      overflow: hidden;
+      justify-content: center;
+      cursor: pointer;
+      span:first-child{
+        width: 1.98rem;
+        transform: rotate(-45deg);
+      }
+      span:nth-child(2) {
+        display: none;
+      }
+      span:nth-child(3) {
+        width:  1.98rem;
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
+//
 
+// style main block
 .main{
   background: linear-gradient(129.34deg, #FECA57 56.78%, #E3AA2D 101.94%);
   padding: 6rem 0;
@@ -314,10 +360,9 @@ html {
 
   }
 }
+//
 
-
-
-
+// style work block
 .work{
   &__block{
     position: relative;
@@ -342,6 +387,7 @@ html {
   }
 }
 
+// style box block
 .box{
   &__wrap{
     position:relative;
@@ -432,7 +478,9 @@ html {
 
   }
 }
+//
 
+// style mission block
 .mission{
   position: relative;
   &__back{
@@ -491,7 +539,9 @@ html {
     }
   }
 }
+//
 
+// style posts block
 .posts{
   &__wrap{
     text-align: center;
@@ -595,8 +645,9 @@ html {
     }
   }
 }
+//
 
-
+// style blog block
 .blog{
   &__wrap{
     position: relative;
@@ -708,9 +759,9 @@ html {
     }
   }
 }
+//
 
-
-
+// style signin block
 .signin{
   &__back{
     position: absolute;
@@ -807,6 +858,9 @@ html {
     }
   }
 }
+//
+
+// style clients block
 .clients{
   position: relative;
   .section__desc > *{
@@ -998,6 +1052,9 @@ html {
   }
 
 }
+//
+
+// style footer
 .footer{
   position: relative;
   background-color: white;
@@ -1116,13 +1173,8 @@ html {
   }
 }
 
-label.error{
-  position: absolute;
-  left: 3.5rem;
-  top: 8rem;
-  color: #f5937f;
-  width: max-content;
-}
+
+//style modal
 .modal{
   display: none;
   max-width: 80.4rem;
@@ -1202,65 +1254,41 @@ label.error{
     cursor: pointer;
   }
 }
+//
 
-
-
-.header__mob{
-  background: white;
-  position: relative;
-  z-index:4;
-  display: none;
-}
-.header__burger {
-  top: 2.5rem;
-  right: 1.5rem;
-  height: 1.1rem;
-  width: 1.7rem;
-  position: absolute;
-  display: none;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.header__burger span{
-  height: 0.1rem;
-  width: 1.7rem;
-  display: block;
-  background: $main_color;
-}
-
-.close-btn {
-  height: 1.4rem;
-  width: 1.4rem;
-  //padding: 2rem;
-  overflow: hidden;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.close-btn span:first-child {
-  width: 1.98rem;
-  transform: rotate(-45deg);
-}
-
-.close-btn span:nth-child(2) {
-  display: none;
-}
-
-.close-btn span:nth-child(3) {
-  width:  1.98rem;
-  transform: rotate(45deg);
-}
+//other style
 .fancybox-close-small{
   display: none;
 }
 .fancybox-content{
   padding: 0;
 }
+label.error{
+  position: absolute;
+  left: 3.5rem;
+  top: 8rem;
+  color: #f5937f;
+  width: max-content;
+}
+
 .no-scroll{
   overflow: hidden;
 }
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+//
+
+
+
 
 @import 'media';
