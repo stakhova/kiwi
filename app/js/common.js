@@ -1,31 +1,22 @@
+const sliderReview = () => {
+    $('.clients__review-slider').slick();
+}
 
-$(document).ready(function(){
+const sliderBlog = () =>{
     if (window.innerWidth <= 666) {
         $(".blog__list").addClass('slider__blog');
+        $('.slider__blog').slick({
+            dots: true,
+        });
     }
-})
-
-$(document).ready(function(){
-    $('.slider__blog').slick({
-        dots: true,
-    });
-})
-$(document).ready(function(){
-    $('.clients__review-slider').slick({
-    });
-})
-
-$(document).ready(function(){
-    $(".header__mob").on("click", function(){
-        $(".header__burger").toggleClass("header__burger-close");
-        $(".header__menu").toggleClass("header__menu-open");
-        $("body").toggleClass('no-scroll');
-    });
-})
-
-$(document).ready(function () {
-    $('#modal').fancybox({
-    });
+}
+const openMenu = () => {
+    $(".header__burger").toggleClass("header__burger-close");
+    $(".header__menu").toggleClass("header__menu-open");
+    $("body").toggleClass('no-scroll');
+}
+const validateForm = () => {
+    $('#modal').fancybox();
     $('#signin__form').validate({
         rules: {
             email: {
@@ -43,8 +34,15 @@ $(document).ready(function () {
             $('#signin__form')[0].reset();
         }
     });
+
+}
+
+$(document).ready(function(){
+    sliderReview();
+    sliderBlog()
+})
+
+$( window ).on( "load", function() {
+    validateForm()
+    $(".header__mob").on("click", openMenu);
 });
-
-
-
-
