@@ -82,7 +82,6 @@ html {
 
 //style section
 .section{
-
   &:nth-child(odd){
     background-color: $color_background;
   }
@@ -159,6 +158,7 @@ html {
         padding: 1.6rem;
       }
       &:hover{
+        transition: all 0.2s ease-in;
         background: linear-gradient(141.39deg, #74E6CF 13.88%, #C0E594 106.32%);
       }
     }
@@ -281,8 +281,8 @@ html {
       visibility: hidden;
       background-color: #F0F8F6;
       margin: 0;
-      padding: 11rem 0 6rem;
       overflow: hidden;
+      padding-top: 6rem;
     }
     &-open{
       @media only screen and (max-width: 666px){
@@ -293,9 +293,12 @@ html {
         top: 0rem;
         left: 0;
         z-index: 3;
+        padding: 11rem 0 6rem;
         overflow: hidden;
       }
     }
+
+
   }
   &__back{
     display: none;
@@ -424,15 +427,17 @@ html {
       overflow: hidden;
       justify-content: center;
       cursor: pointer;
-      span:first-child{
+      & > *{
+        position: absolute;
         width: 1.98rem;
+      }
+      span:first-child{
         transform: rotate(-45deg);
       }
       span:nth-child(2) {
         display: none;
       }
       span:nth-child(3) {
-        width:  1.98rem;
         transform: rotate(45deg);
       }
     }
@@ -1025,7 +1030,6 @@ html {
 
 // style blog block
 .blog{
-
   &__wrap{
     position: relative;
     @media only screen and (max-width: 666px) {
@@ -1059,9 +1063,11 @@ html {
         font-size: 1.2rem;
         padding: 0.8rem 3rem 0.8rem 1rem;
         &:after{
-          content: url("../img/icon/read-more.svg");
+          content: url("../img/icons/read-more.svg");
           position: absolute;
           top: 50%;
+          width: 2.2rem;
+          height: 2.2rem;
           transform: translateY(-50%);
           right: 0.4rem;
           z-index: 1;
