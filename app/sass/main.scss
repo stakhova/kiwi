@@ -283,7 +283,6 @@ html {
       margin: 0;
       padding: 11rem 0 6rem;
       overflow: hidden;
-
     }
     &-open{
       @media only screen and (max-width: 666px){
@@ -445,11 +444,24 @@ html {
 .main{
   background: linear-gradient(129.34deg, #FECA57 56.78%, #E3AA2D 101.94%);
   padding: 6rem 0;
+  @media only screen and (max-width: 666px){
+    padding: 2rem 0;
+  }
   &__block{
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-bottom: -3rem;
+    @media only screen and (max-width: 666px){
+      padding-bottom: 23.5rem;
+    }
+    &-big{
+      @media only screen and (max-width: 666px){
+        position: absolute;
+        top: 2rem;
+      }
+    }
   }
   &__block-little{
     position: relative;
@@ -457,16 +469,29 @@ html {
   }
   &__block-left{
     left: 15rem;
+    @media only screen and (max-width: 666px){
+      left: 0;
+    }
     .main__img:first-child{
       position:relative;
       left: 11rem;
+      @media only screen and (max-width: 666px){
+        left: 0;
+      }
     }
   }
   &__block-right{
     right: 15rem;
+    @media only screen and (max-width: 666px){
+      right: 0;
+    }
+
     .main__img:last-child{
       position:relative;
       right: 11rem;
+      @media only screen and (max-width: 666px){
+        right: 0;
+      }
     }
   }
   &__button{
@@ -480,17 +505,33 @@ html {
     bottom: -11rem;
     left: calc(50% + 3rem);
     transform: translate(-50%);
+    @media only screen and (max-width: 666px){
+      width:29.7rem;
+      height:10.3rem;
+      bottom: 16rem;
+      left: calc(50% + 1rem);
+    }
   }
   &__img{
     width: 40rem;
     height: 30rem;
+    @media only screen and (max-width: 666px){
+      width: 7.4rem;
+      height: 7rem;
+    }
     &-big{
       width: 91.5rem;
       height: 67.2rem;
+      @media only screen and (max-width: 666px){
+        width: 33.5rem;
+        height: 29.7rem;
+      }
     }
-  }
-  &__block{
-    margin-bottom: -3rem;
+    img{
+      @media only screen and (max-width: 666px){
+        object-fit: none;
+      }
+    }
   }
   &__title{
     position: relative;
@@ -505,15 +546,26 @@ html {
       color: #212121;
       letter-spacing: 0.05em;
       line-height: 9.6rem;
+      @media only screen and (max-width: 666px){
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+        text-align: center;
+      }
     }
     &-right{
       position: absolute;
       top: 8rem;
       left: calc(50% + 6rem);
+
       & > p{
         position: relative;
         top: -3rem;
         right: -16rem;
+        @media only screen and (max-width: 666px){
+          top: 0;
+          right: -0.2rem;
+          display: inline;
+        }
 
       }
       & > *{
@@ -521,6 +573,16 @@ html {
         color: white;
         font-size: 7.2rem;
         font-family: 'Galada',Arial, Helvetica, sans-serif;
+        @media only screen and (max-width: 666px){
+          font-size: 2.6rem;
+          line-height: 4.2rem;
+        }
+      }
+      @media only screen and (max-width: 666px){
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
       }
     }
 
@@ -569,7 +631,7 @@ html {
   &__item{
     &-title > *{
       @media only screen and (max-width: 666px) {
-        padding: 0;
+        padding:3rem 0 1rem ;
       }
     }
     @media only screen and (max-width: 666px) {
@@ -815,6 +877,9 @@ html {
     & > *{
       letter-spacing: 0;
       text-align: left;
+      @media only screen and (max-width: 666px) {
+        text-align: center;
+      }
     }
     &-block{
       position: relative;
@@ -964,7 +1029,6 @@ html {
   &__wrap{
     position: relative;
     @media only screen and (max-width: 666px) {
-      margin-top: 2rem;
       padding: 5rem 0;
     }
   }
@@ -1068,17 +1132,17 @@ html {
   }
   .section__desc{
     position: relative;
-    @media only screen and (max-width: 666px) {
-      top:-3rem;
-    }
     &:before{
       content: url("../img/icons/waveBig.svg");
       width: 6rem;
       height: 0.5rem;
       position: absolute;
       top: -4rem;
-      left: 0rem;
+      left: 0;
       z-index: 1;
+      @media only screen and (max-width: 666px) {
+        top: -3rem;
+      }
     }
   }
   .slick-dotted.slick-slider{
@@ -1167,6 +1231,9 @@ html {
   }
   .section__title{
     text-align: left;
+    @media only screen and (max-width: 666px) {
+     text-align: center;
+    }
   }
   &__title{
     margin-bottom: 3rem;
